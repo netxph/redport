@@ -1,0 +1,6 @@
+log/*.log
+tmp/**/*
+
+# Other userful tidbits
+doc/api
+doc/app
