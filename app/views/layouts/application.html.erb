@@ -1,8 +1,14 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
   <head>
     <title>redport: an online photography portfolio</title>
   </head>
   <body>
+    <%= render :partial => "shared/header" %>
+    <br>
     <%= yield %>
+    <br>
+    <br>
+    <%= render :partial => "shared/footer" %>
   </body>
 </html>
