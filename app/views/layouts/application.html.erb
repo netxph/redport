@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>redport: an online photography portfolio</title>
+    <%= yield :styles %>
+    <%= render :partial => "shared/styles" %>
   </head>
   <body>
     <%= render :partial => "shared/header" %>
@@ -10,5 +12,8 @@
     <br>
     <br>
     <%= render :partial => "shared/footer" %>
+
+    <%= yield :scripts %>
+    <%= render :partial => "shared/scripts" %>
   </body>
 </html>
