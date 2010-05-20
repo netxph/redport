@@ -1,9 +1,27 @@
 body {
   background-color: black;
-  color: white;
+  color: gray;
   font-family: sans-serif;
 }
 
 h1 {
   font-size: 24px;
+}
+
+#name {
+  color: white;
+}
+
+div.thumbnail {
+  padding: 3px 3px 8px 3px;
+	background-color: #222;
+	border: 1px solid #2a2a2a;
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+div.thumbnail img {
+  width: 140px;
+  height: 100px;
 }
