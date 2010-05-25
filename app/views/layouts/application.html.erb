@@ -7,10 +7,12 @@
   </head>
   <body>
     <%= render :partial => "shared/header" %>
-    <br>
-    <%= yield %>
-    <br>
-    <br>
+
+    <div id="content">
+      <%= yield %>
+    </div>
+
+
     <%= render :partial => "shared/footer" %>
 
     <%= yield :scripts %>
