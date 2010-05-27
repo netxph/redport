@@ -6,15 +6,11 @@
     <%= render :partial => "shared/styles" %>
   </head>
   <body>
-    <%= render :partial => "shared/header" %>
-
     <div id="content">
+      <%= render :partial => "shared/header" %>
       <%= yield %>
+      <%= render :partial => "shared/footer" %>
     </div>
-
-
-    <%= render :partial => "shared/footer" %>
-
     <%= yield :scripts %>
     <%= render :partial => "shared/scripts" %>
   </body>
