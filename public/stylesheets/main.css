@@ -23,6 +23,37 @@ h1 {
   margin-right: auto;
 }
 
+#menu {
+  float: right;
+}
+
+#menu ul {
+  margin-left: 0;
+  padding-left: 0;
+  white-space: nowrap;
+}
+
+#menu li {
+  display: inline;
+  list-style-type: none;
+}
+
+#menu a {
+  padding: 3px 10px;
+}
+
+#menu a:link, a:visited {
+  color: #fff;
+  background-color: #000;
+  text-decoration: none;
+}
+
+#menu a:hover {
+  color: #fff;
+  background-color: gray;
+  text-decoration: none;
+}
+
 div.thumbnail {
   padding: 3px 3px 8px 3px;
 	background-color: #222;
