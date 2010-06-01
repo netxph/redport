@@ -1,18 +1,16 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
   <head>
-    <title>redport: an online photography portfolio</title>
+    <title>marc vitalis | stolen shots</title>
     <%= yield :styles %>
     <%= render :partial => "shared/styles" %>
   </head>
   <body>
     <div id="container">
-      <div id="content">
-        <%= render :partial => "shared/header" %>
-        <%= render :partial => "shared/menu" %>
-        <%= yield %>
-        <%= render :partial => "shared/footer" %>
-      </div>
+      <%= render :partial => "shared/header" %>
+      <%= yield %>
+      <%= render :partial => "shared/footer" %>
+
       <%= yield :scripts %>
       <%= render :partial => "shared/scripts" %>
     </div>

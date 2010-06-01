@@ -8,9 +8,18 @@ h1 {
   font-size: 24px;
 }
 
-#title {
+#container {
+  width: 1024px;  
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#header {
   margin: 15px 15px 15px 15px;
-  text-align: left;
+}
+
+#title {
+  display: inline;
 }
 
 #name {
@@ -18,19 +27,14 @@ h1 {
 }
 
 #content {
-  width: 1024px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-#menu {
-  float: right;
-}
-
-#menu ul {
+ul#menu {
   margin-left: 0;
   padding-left: 0;
   white-space: nowrap;
+  display: inline;
+  text-align: right;
 }
 
 #menu li {
@@ -43,26 +47,35 @@ h1 {
 }
 
 #menu a:link, a:visited {
-  color: #fff;
+  color: gray;
   background-color: #000;
   text-decoration: none;
+  float: right;
 }
 
 #menu a:hover {
   color: #fff;
   background-color: gray;
   text-decoration: none;
+  float: right;
+}
+
+#footer {
+  float: left;
+  font-size: 14px;
+  text-align: center;
+  width: 1024px;
 }
 
 div.thumbnail {
-  padding: 3px 3px 8px 3px;
-	background-color: #222;
+  padding: 3px 3px 15px 3px;
+	background-color: #111;
 	border: 1px solid #2a2a2a;
 	float: left;
-	margin: 15px 15px 15px 15px;
+	margin: 10px 10px 10px 10px;
 }
 
 div.thumbnail img {
-  width: 300px;
-  height: 180px;
+  width: 310px;
+  height: 185px;
 }
