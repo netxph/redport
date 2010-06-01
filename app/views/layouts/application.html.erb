@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
   <head>
-    <title>marc vitalis | stolen shots</title>
+    <title><%= "#{APP_CONFIG['global']['name']} | #{APP_CONFIG['global']['title']}" %></title>
     <%= yield :styles %>
     <%= render :partial => "shared/styles" %>
   </head>

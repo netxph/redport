@@ -2,6 +2,7 @@ log/*.log
 tmp/**/*
 
 config/database.yml
+config/config.yml
 
 # Other userful tidbits
 doc/api
