@@ -4,6 +4,8 @@ tmp/**/*
 config/database.yml
 config/config.yml
 
+db/*.sqlite3
+
 # Other userful tidbits
 doc/api
 doc/app
