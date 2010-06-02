@@ -3,6 +3,7 @@ tmp/**/*
 
 config/database.yml
 config/config.yml
+config/flickr.yml
 
 db/*.sqlite3
 

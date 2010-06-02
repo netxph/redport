@@ -20,6 +20,9 @@ Rails::Initializer.run do |config|
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
 
+  config.gem 'mime-types', :lib => 'mime/types'
+  config.gem 'flickr-fu', :lib => 'flickr_fu'
+
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
   # config.plugins = [ :exception_notification, :ssl_requirement, :all ]
@@ -44,5 +47,8 @@ Rails::Initializer.run do |config|
 end
 
 # Load configuration files
-config_reader = File.read(RAILS_ROOT + "/config/config.yml")
+config_reader = File.read(RAILS_ROOT + '/config/config.yml')
 APP_CONFIG = YAML.load(config_reader)[RAILS_ENV]
+
+# Requires
+require 'flickr_fu'
