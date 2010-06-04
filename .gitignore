@@ -5,6 +5,8 @@ config/database.yml
 config/config.yml
 config/flickr.yml
 
+tags
+
 db/*.sqlite3
 
 # Other userful tidbits
