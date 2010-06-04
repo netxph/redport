@@ -3,6 +3,4 @@ development:
     name: marc vitalis
     title: stolen shots
   flickr:
-    key: "[your key]"
-    secret: "[your secret]"
-    token_cache: "token_cache.yml"
+    user_id: [your user id]
