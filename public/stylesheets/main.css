@@ -1,5 +1,7 @@
 body {
   background-color: black;
+  background-image: url("../images/bg.jpg");
+  background-repeat: repeat-x;
   color: gray;
   font-family: sans-serif;
 }
@@ -47,14 +49,12 @@ ul#menu {
 
 #menu a:link, a:visited {
   color: gray;
-  background-color: #000;
   text-decoration: none;
   float: right;
 }
 
 #menu a:hover {
-  color: #fff;
-  background-color: gray;
+  color: #fff;  
   text-decoration: none;
   float: right;
 }
@@ -91,4 +91,8 @@ div.thumbnail img {
 
 #about p {
   padding: 10px 10px 10px 10px;
+}
+
+#about a {
+float: none;
 }
