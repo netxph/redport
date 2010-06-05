@@ -2,5 +2,21 @@
 
 redport is a customizable online photography portfolio.
 
-Available for 1.0 version.
-* Display pictures using lightbox.
+v1.0 is already released.
+* customizable css
+* integrated with flickr
+* uses lightbox for viewing
+
+HOW TO USE
+* copy and modify
+  - database.template => database.yml
+  - config.template => config.yml
+  - flickr.template => flickr.yml
+* run
+  - rake db:migrate
+  - rake gems:install
+
+v1.1 target features
+* paging
+* showing of titles and description
+* guest book and feedback
