@@ -33,8 +33,7 @@ ul#menu {
   margin-left: 0;
   padding-left: 0;
   white-space: nowrap;
-  display: inline;
-  text-align: right;
+  display: inline;  
 }
 
 #menu li {
@@ -65,6 +64,7 @@ ul#menu {
   font-size: 14px;
   text-align: center;
   width: 1024px;
+  padding: 15px 15px 15px 15px;
 }
 
 div.thumbnail {
@@ -78,4 +78,17 @@ div.thumbnail {
 div.thumbnail img {
   width: 310px;
   height: 185px;
+}
+
+#about {
+
+}
+
+#about h2 {
+  size: 20px;
+  color: white;
+}
+
+#about p {
+  padding: 10px 10px 10px 10px;
 }

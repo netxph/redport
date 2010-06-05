@@ -49,6 +49,3 @@ end
 # Load configuration files
 config_reader = File.read(RAILS_ROOT + '/config/config.yml')
 APP_CONFIG = YAML.load(config_reader)[RAILS_ENV]
-
-# Requires
-require 'flickr_fu'
