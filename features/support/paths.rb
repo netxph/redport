@@ -10,6 +10,8 @@ module NavigationHelpers
 
     when /the homepage/
       root_path
+    when /new feedback/
+      new_feedback_path
     
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

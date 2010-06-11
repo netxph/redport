@@ -5,7 +5,7 @@ Feature: Manage Articles
   
   Scenario: Create Feedback
     Given I have no feedbacks
-    When I follow new feedback
-    And I fill in "Email" with "someone@somewhere.com"
-    And I fill in "Content" with "Great site!"
+    When I am on new feedback
+    And I fill in "email" with "someone@somewhere.com"
+    And I fill in "content" with "Great site!"
     Then I should have 1 feedback
