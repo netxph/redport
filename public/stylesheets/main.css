@@ -4,10 +4,17 @@ body {
   background-repeat: repeat-x;
   color: gray;
   font-family: sans-serif;
+  font-size: 12px;
 }
 
 h1 {
   font-size: 24px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: bold;
 }
 
 #container {
@@ -80,6 +87,20 @@ div.thumbnail img {
   height: 232px;
 }
 
+#feedback {
+  width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#feedback input.text, textarea {
+  width: 90%;
+}
+
+#feedback input.button {
+  width: 100px;
+}
+
 #about {
 
 }
@@ -95,4 +116,14 @@ div.thumbnail img {
 
 #about a {
 float: none;
+}
+
+#message {
+  border: 1px solid #444;
+  width: 90%;
+}
+
+#message p.notice {
+  color: green;
+  padding: 10px 10px 10px 10px;
 }
