@@ -1,5 +1,6 @@
 class FeedbacksController < ApplicationController
   def new
+    @title = "New Feedback"
     @feedback = Feedback.new
   end
 

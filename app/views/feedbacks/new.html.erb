@@ -1,16 +1,4 @@
 <div id="feedback">
-  <h2>New Feedback</h2>
-  <% if flash[:notice] %>
-  <br>
-  <div id="message">
-    <p class="notice">
-      <%=flash[:notice]%>
-    </p>
-  </div>
-  <br>
-  <% end %>
-  
-  <br>
   <% form_for :feedback, @feedback, :url => { :action => "create" } do |f| %>
   <p>
     <%= f.label :email %><br>

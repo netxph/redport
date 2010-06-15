@@ -15,6 +15,7 @@ h1 {
 h2 {
   font-size: 16px;
   font-weight: bold;
+  color: white;
 }
 
 #container {
@@ -87,8 +88,16 @@ div.thumbnail img {
   height: 232px;
 }
 
+#page_title {
+  width: 480px;
+  padding-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #feedback {
   width: 480px;
+  padding: 15px 15px 15px 15px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -119,6 +128,8 @@ float: none;
 }
 
 #message {
+  margin-top: 10px;
+  margin-bottom: 10px;
   border: 1px solid #444;
   width: 90%;
 }
