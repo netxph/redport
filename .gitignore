@@ -5,6 +5,8 @@ config/database.yml
 config/config.yml
 config/flickr.yml
 
+app/views/shared/_analytics.html.erb
+
 tags
 
 db/*.sqlite3

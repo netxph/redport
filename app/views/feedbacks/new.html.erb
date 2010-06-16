@@ -1,4 +1,5 @@
 <div id="feedback">
+  <%= error_messages_for "feedback" %>
   <% form_for :feedback, @feedback, :url => { :action => "create" } do |f| %>
   <p>
     <%= f.label :email %><br>

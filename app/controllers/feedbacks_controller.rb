@@ -5,9 +5,18 @@ class FeedbacksController < ApplicationController
   end
 
   def create
-    @feedback = Feedback.create!(params[:feedback])
-    flash[:notice] = "New feedback created."
-    redirect_to new_feedback_path
+    @title = "New Feedback"
+    
+    @feedback = Feedback.new(params[:feedback])
+    
+    if @feedback.valid?
+      @feedback.save
+      flash[:notice] = "New feedback created."
+      redirect_to new_feedback_path
+    else
+      flash[:error] = "There are validation errors."
+      render :action => "new"
+    end
   end
 
 end

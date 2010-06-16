@@ -88,6 +88,20 @@ div.thumbnail img {
   height: 232px;
 }
 
+#errorExplanation {
+padding: 15px 15px 15px 15px;
+}
+
+#errorExplanation p {
+  padding-top: 10px;
+}
+
+#errorExplanation ul {
+  list-style-type: square;
+  list-style-position: inside;
+  padding-top: 10px;
+}
+
 #page_title {
   width: 480px;
   padding-top: 30px;
@@ -97,7 +111,7 @@ div.thumbnail img {
 
 #feedback {
   width: 480px;
-  padding: 15px 15px 15px 15px;
+  padding: 0px 15px 15px 15px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -136,5 +150,20 @@ float: none;
 
 #message p.notice {
   color: green;
+  padding: 10px 10px 10px 10px;
+}
+
+#message p.error {
+  color: red;
+  padding: 10px 10px 10px 10px;
+}
+
+#message p.warning {
+  color: yellow;
+  padding: 10px 10px 10px 10px;
+}
+
+#message p.warning {
+  color: white;
   padding: 10px 10px 10px 10px;
 }

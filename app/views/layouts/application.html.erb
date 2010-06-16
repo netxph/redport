@@ -4,6 +4,7 @@
     <title><%= "#{APP_CONFIG['global']['name']} | #{APP_CONFIG['global']['title']}" %></title>
     <%= yield :styles %>
     <%= render :partial => "shared/styles" %>
+    <%= render :partial => "shared/analytics" %>
   </head>
   <body>
     <div id="container">
