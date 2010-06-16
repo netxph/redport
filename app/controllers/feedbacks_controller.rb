@@ -1,9 +1,15 @@
 class FeedbacksController < ApplicationController
+  before_filter :authorize, :except => :new
+  
   def new
     @title = "New Feedback"
     @feedback = Feedback.new
   end
 
+  def index
+    @title = "List Feedback"
+  end
+  
   def create
     @title = "New Feedback"
     

@@ -7,4 +7,24 @@ class ApplicationController < ActionController::Base
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
+  
+  helper_method :admin?
+  
+  protected
+  
+  def authorize
+    unless admin?
+      flash[:error] = "Unauthorize access."
+      redirect_to root_path
+      false
+    end
+  end
+  
+  def admin?
+    unless params[:user].nil?
+      params[:user] == "r3dp0rt"
+    else
+      false
+    end
+  end
 end

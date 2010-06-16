@@ -1,7 +1,6 @@
-<% unless @title.nil? %>
+<% unless @title.nil? and flash.count == 0 %>
   <div id="page_title">
     <h2><%=@title%></h2>
-  
     <% flash.each do |key, msg| %>
       <div id="message">
         <%= content_tag :p, msg, :class => key %>
@@ -9,3 +8,4 @@
     <% end %>
   </div>
 <% end %>
+

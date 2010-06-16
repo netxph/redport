@@ -102,13 +102,6 @@ padding: 15px 15px 15px 15px;
   padding-top: 10px;
 }
 
-#page_title {
-  width: 480px;
-  padding-top: 30px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 #feedback {
   width: 480px;
   padding: 0px 15px 15px 15px;
@@ -139,6 +132,13 @@ padding: 15px 15px 15px 15px;
 
 #about a {
 float: none;
+}
+
+#page_title {
+  width: 480px;
+  padding-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #message {
