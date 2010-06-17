@@ -1,5 +1,5 @@
 class FeedbacksController < ApplicationController
-  before_filter :authorize, :except => :new
+  before_filter :authorize, :except => [:new, :create]
   
   def new
     @title = "New Feedback"
@@ -8,6 +8,8 @@ class FeedbacksController < ApplicationController
 
   def index
     @title = "List Feedback"
+    
+    @feedbacks = Feedback.all
   end
   
   def create

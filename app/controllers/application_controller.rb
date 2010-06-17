@@ -14,7 +14,6 @@ class ApplicationController < ActionController::Base
   
   def authorize
     unless admin?
-      flash[:error] = "Unauthorize access."
       redirect_to root_path
       false
     end
@@ -22,7 +21,11 @@ class ApplicationController < ActionController::Base
   
   def admin?
     unless params[:user].nil?
-      params[:user] == "r3dp0rt"
+      session[:user] = params[:user]
+    end
+      
+    unless session[:user].nil?
+      session[:user] == APP_CONFIG["global"]["admin"]
     else
       false
     end

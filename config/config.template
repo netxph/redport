@@ -2,11 +2,27 @@ development:
   global:
     name: marc vitalis
     title: stolen shots
+    admin: [your admin key]
   flickr:
     user_id: [your user id]
 production:
   global:
     name: marc vitalis
     title: stolen shots
+    admin: [your admin key]
+  flickr:
+    user_id: [your user id]
+test:
+  global:
+    name: marc vitalis
+    title: stolen shots
+    admin: [your admin key]
+  flickr:
+    user_id: [your user id]
+cucumber:
+  global:
+    name: marc vitalis
+    title: stolen shots
+    admin: [your admin key]
   flickr:
     user_id: [your user id]

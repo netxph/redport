@@ -25,3 +25,13 @@ Feature: Manage Articles
     And I fill in "Content" with ""
     And I press "Create"
     Then I should see "Email is invalid"
+    
+  Scenario: Admin Login
+    When I am on the root as r3dp0rt
+    Then I should see ".view feedbacks"
+    
+  Scenario: View Feedbacks
+    Given I have posts from test@live.com, post@live.com
+    When I go to the list of feedbacks as r3dp0rt
+    Then I should see "test@live.com"
+    And I should see "post@live.com"

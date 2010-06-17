@@ -10,8 +10,12 @@ module NavigationHelpers
 
     when /the homepage/
       root_path
+    when /the root as (.+)/
+      root_path(:user => $1)
     when /new feedback/
       new_feedback_path
+    when /^the list of feedbacks as (.+)/i
+      feedbacks_path(:user => $1)
     
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
