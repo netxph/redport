@@ -18,6 +18,12 @@ h2 {
   color: white;
 }
 
+h3 {
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+}
+
 #container {
   width: 1024px;  
   margin-left: auto;
@@ -75,15 +81,82 @@ ul#menu {
   padding: 15px 15px 15px 15px;
 }
 
-div.thumbnail {
-  padding: 3px 3px 15px 3px;
+#footer a {
+  float: none;
+}
+
+#gallery div.thumbnail {
+  padding: 3px 3px 3px 3px;
 	background-color: #111;
 	border: 1px solid #2a2a2a;
 	float: left;
 	margin: 10px 10px 10px 10px;
 }
 
-div.thumbnail img {
+#featured {
+  display: inline;
+}
+
+#featured div.largepic {
+  padding: 3px 3px 3px 3px;
+  background-color: #111;
+  border: 1px solid #2a2a2a;
+  margin: 10px 10px 10px 10px;
+  float: left;
+}
+
+#featured div.caption {
+  float: left;
+  width: 418px;
+  height: 100px;
+  padding: 3px 3px 3px 3px;
+  margin: 10px 10px 10px 0px;
+  border: 1px solid #2a2a2a;
+}
+
+#featured div.caption h2 {
+  padding: 10px 10px 10px 10px;
+  text-align: right;
+}
+
+#featured div.caption p {
+  font-size: 14px;
+  padding: 10px 10px 10px 10px;
+}
+
+#featured div.about {
+  float: left;
+  width: 418px;
+  height: 287px;
+  padding: 3px 3px 3px 3px;
+  margin: 10px 10px 10px 0px;
+  border: 1px solid #2a2a2a;
+}
+
+#featured div.about h2 {
+  padding: 10px 10px 10px 10px;
+  text-align: right;
+}
+
+#featured div.about p {
+  line-height: 130%;
+  font-size: 14px;
+  padding: 10px 10px 10px 10px;
+}
+
+#featured div.largepic img {
+  width: 550px;
+  height: 412px;
+}
+
+#gallery div.thumbnail div.label {
+}
+
+#gallery div.thumbnail div.label p {
+  text-align: right;
+}
+
+#gallery div.thumbnail img {
   width: 310px;
   height: 232px;
 }

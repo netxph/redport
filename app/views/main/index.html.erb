@@ -7,10 +7,27 @@
   <script src="javascripts/scriptaculous.js?load=effects,builder" type="text/javascript"></script>
   <script src="javascripts/lightbox.js" type="text/javascript"></script>
 <% end %>
+<div id="featured">
+  <div class="largepic">
+    <img src=<%= Gallery.photos[3].url(:large) %> />
+  </div>
+  <div class="caption">
+    <h2>...<%=h Gallery.photos[3].title.downcase %></h2>
+    <p><%= Gallery.photos[3].description.gsub("\n","<br>") %></p>
+  </div>
+  <div class="about">
+    <%= render :partial => "shared/about" %>
+  </div>
+</div>
 <div id="gallery">
   <% Gallery.photos.each do |photo| %>
     <div class="thumbnail">
-    <%= render_photo(photo) %>
+      <%= render_photo(photo) %>
+      <div class="label">
+        <p>
+        <%= "...#{photo.title}" %>
+        </p>
+      </div>
     </div>
   <% end %>  
 </div>
