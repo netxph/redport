@@ -9,11 +9,11 @@
 <% end %>
 <div id="featured">
   <div class="largepic">
-    <img src=<%= Gallery.photos[3].url(:large) %> />
+    <img src=<%= @featured_photo.url(:large) %> />
   </div>
   <div class="caption">
-    <h2>...<%=h Gallery.photos[3].title.downcase %></h2>
-    <p><%= Gallery.photos[3].description.gsub("\n","<br>") %></p>
+    <h2>...<%=h @featured_photo.title.downcase %></h2>
+    <p><%=h @featured_photo.description.gsub("\n","<br>") %></p>
   </div>
   <div class="about">
     <%= render :partial => "shared/about" %>
