@@ -7,6 +7,14 @@ v1.0 is already released.
 * integrated with flickr
 * uses lightbox for viewing
 
+v1.1 about to be released.
+* refresh administration tool
+* analytics
+* feedback page
+* simple admin for viewing feedbacks
+* featured photo
+* showing of titles
+
 HOW TO USE
 * copy and modify
   - database.template => database.yml
