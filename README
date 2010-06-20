@@ -17,9 +17,16 @@ v1.1 about to be released.
 
 HOW TO USE
 * copy and modify
+
+configurations
   - database.template => database.yml
   - config.template => config.yml
   - flickr.template => flickr.yml
+
+shared views
+  - _about.html.template => _about.html.erb
+  - _analytics.html.template => _analytics.html.erb
+  
 * run
   - rake db:migrate
   - rake gems:install
