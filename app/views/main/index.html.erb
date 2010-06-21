@@ -1,11 +1,9 @@
 <% content_for :styles do %>
-  <link rel="stylesheet" href="stylesheets/lightbox.css" type="text/css" media="screen" />
+  <%= stylesheet_link_tag "lytebox" %>
 <% end %>
 
 <% content_for :scripts do %>
-  <script src="javascripts/prototype.js" type="text/javascript"></script>
-  <script src="javascripts/scriptaculous.js?load=effects,builder" type="text/javascript"></script>
-  <script src="javascripts/lightbox.js" type="text/javascript"></script>
+  <%= javascript_include_tag "lytebox" %>
 <% end %>
 <div id="featured">
   <div class="largepic">
