@@ -17,7 +17,7 @@ class FeedbacksController < ApplicationController
     
     @feedback = Feedback.new(params[:feedback])
     
-    if @feedback.valid?
+    if @feedback.valid? and verify_recaptcha(:model => @feedback, :message => "Input valid verification string.")
       @feedback.save
       flash[:notice] = "New feedback created."
       redirect_to new_feedback_path
