@@ -22,7 +22,8 @@ Rails::Initializer.run do |config|
 
   config.gem 'mime-types', :lib => 'mime/types' #, :version => '1.16'
   config.gem 'flickr-fu', :lib => 'flickr_fu' #, :version => '0.1.4'
-  config.gem "ambethia-recaptcha", :lib => "recaptcha/rails", :source => "http://gems.github.com"
+  config.gem 'ambethia-recaptcha', :lib => 'recaptcha/rails', :source => "http://gems.github.com"
+  config.gem 'web-magick', :lib => 'web_magick'
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
