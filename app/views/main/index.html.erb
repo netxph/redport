@@ -2,13 +2,31 @@
   <%= stylesheet_link_tag "lytebox" %>
 <% end %>
 
+<% content_for :preload_scripts do %>
+  <script type="text/javascript" src="http://seadragon.com/ajax/0.8/seadragon-min.js" />
+  <script type="text/javascript">
+    var viewer = null;
+            
+    function init() {
+      viewer = new Seadragon.Viewer("viewer");
+      viewer.openDzi("images/coffee.dzi");
+    }
+            
+    Seadragon.Utils.addEvent(window, "load", init);
+  </script>
+<% end %>
+
 <% content_for :scripts do %>
   <%= javascript_include_tag "lytebox" %>
 <% end %>
+
 <div id="featured">
   <% unless @featured_photo.nil? %>
     <div class="largepic">
-      <%= render_featured(@featured_photo) %>
+      <div id="viewer"></div>
+      <!--
+      %= render_featured(@featured_photo) %>
+      -->
     </div>
     <div class="caption">
       <h2>...<%=h @featured_photo.name.downcase %></h2>
@@ -19,6 +37,7 @@
     </div>
   <% end %>
 </div>
+
 <div id="gallery">
   <% unless @photos.nil? %>
     <% @photos.each do |photo| %>

@@ -2,9 +2,10 @@
 <html>
   <head>
     <title><%= "#{APP_CONFIG['global']['name']} | #{APP_CONFIG['global']['title']}" %></title>
+    <%= yield :preload_scripts %>
+    <%= render :partial => "shared/analytics" %>
     <%= yield :styles %>
     <%= render :partial => "shared/styles" %>
-    <%= render :partial => "shared/analytics" %>
   </head>
   <body>
     <div id="container">

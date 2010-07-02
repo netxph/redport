@@ -98,6 +98,14 @@ ul#menu {
 	margin: 10px 10px 10px 10px;
 }
 
+#viewer {
+  width: 548px;
+  height: 412px;
+  background-color: black;
+  border: 1px solid black;
+  color: white;   /* for error messages, etc. */
+}
+
 #featured {
   display: inline;
 }
@@ -154,10 +162,12 @@ ul#menu {
   text-decoration: underline;
 }
 
+/*
 #featured div.largepic img {
   width: 550px;
   height: 412px;
 }
+*/
 
 #gallery div.thumbnail div.label {
 }
