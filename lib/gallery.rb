@@ -23,7 +23,7 @@ class Gallery
 
 
   def self.get_featured(photo)
-    get_image(photo, 550, 412, FEATURED_ROOT, WEB_FEATURED_ROOT)
+    get_dzi(photo, FEATURED_ROOT, WEB_FEATURED_ROOT)
   end
 
 
@@ -31,6 +31,14 @@ class Gallery
     get_image(photo, 310, 232, THUMB_ROOT, WEB_THUMB_ROOT)
   end
 
+  def self.get_dzi(photo, location, web_location)
+    unless File.exist? "#{location}/#{photo.code}.dzi" 
+    
+      prepare_directory
+      create_dzi(photo, location)
+    end
+    return "#{web_location}/#{photo.code}.dzi"
+  end
 
   def self.get_image(photo, width, height, location, web_location)
     unless File.exist? "#{location}/#{photo.code}.jpg" 
@@ -39,10 +47,14 @@ class Gallery
       prepare_directory
       create_thumbnail(photo, width, height, location)
     end
-
     return "#{web_location}/#{photo.code}.jpg"
   end
 
+  def self.create_dzi(photo, location)
+    file_options  = { :name => photo.code, :dir => location, :format  => 'jpg', :quality => 60 }
+
+    DeepZoom.new(photo.url, file_options).slice!
+  end
 
   def self.create_thumbnail(photo, width, height, location)
     image_tools = WebMagick.new
