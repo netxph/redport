@@ -185,7 +185,7 @@ padding: 15px 15px 15px 15px;
   padding-top: 10px;
 }
 
-#feedback {
+#placeholder {
   width: 480px;
   padding: 0px 15px 15px 15px;
   margin-left: auto;
@@ -193,15 +193,15 @@ padding: 15px 15px 15px 15px;
   margin-top: 30px;
 }
 
-#feedback input.text, textarea {
+#placeholder input.text, textarea {
   width: 90%;
 }
 
-#feedback input.button {
+#placeholder input.button {
   width: 100px;
 }
 
-#feedback div.item {
+#placeholder div.item {
   border: 1px dotted gray;
   margin-bottom: 5px;
 }

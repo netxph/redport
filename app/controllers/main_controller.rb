@@ -9,7 +9,16 @@ class MainController < ApplicationController
     end
   end
 
+  def login
+  end
+
+  def secure
+    session[:user] = params[:password]
+    redirect_to root_url
+  end
+
   def about
+
   end
   
   def refresh
