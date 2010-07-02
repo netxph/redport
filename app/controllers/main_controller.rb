@@ -1,14 +1,7 @@
 class MainController < ApplicationController
   def index
     @photos = Photograph.all
-
-    featured_index = 1 + rand(@photos.count)
-    @featured_photo = @photos[featured_index]
-
-    #just in case it returns null
-    if @featured_photo.nil?
-      @featured_photo = @photos[0]
-    end
+    @featured_photo = Photograph.get_featured
   end
 
   def login
