@@ -6,26 +6,30 @@
   <%= javascript_include_tag "lytebox" %>
 <% end %>
 <div id="featured">
-  <div class="largepic">
-    <%= render_featured(@featured_photo) %>
-  </div>
-  <div class="caption">
-    <h2>...<%=h @featured_photo.title.downcase %></h2>
-    <p><%=h @featured_photo.description.gsub("\n","<br>") %></p>
-  </div>
-  <div class="about">
-    <%= render :partial => "shared/about" %>
-  </div>
+  <% unless @featured_photo.nil? %>
+    <div class="largepic">
+      <%= render_featured(@featured_photo) %>
+    </div>
+    <div class="caption">
+      <h2>...<%=h @featured_photo.name.downcase %></h2>
+      <p><%=h @featured_photo.description.gsub("\n","<br>") %></p>
+    </div>
+    <div class="about">
+      <%= render :partial => "shared/about" %>
+    </div>
+  <% end %>
 </div>
 <div id="gallery">
-  <% Gallery.photos.each do |photo| %>
-    <div class="thumbnail">
-      <%= render_photo(photo) %>
-      <div class="label">
-        <p>
-        <%= "...#{photo.title}" %>
-        </p>
+  <% unless @photos.nil? %>
+    <% @photos.each do |photo| %>
+      <div class="thumbnail">
+        <%= render_photo(photo) %>
+        <div class="label">
+          <p>
+          <%= "...#{photo.name}" %>
+          </p>
+        </div>
       </div>
-    </div>
-  <% end %>  
+    <% end %>  
+  <% end %>
 </div>

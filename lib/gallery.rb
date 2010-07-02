@@ -33,29 +33,27 @@ class Gallery
 
 
   def self.get_image(photo, width, height, location, web_location)
-    unless File.exist? "#{location}/#{photo.id}.jpg" 
-      puts "creating thumbnail #{location}/#{photo.id}.jpg"
+    unless File.exist? "#{location}/#{photo.code}.jpg" 
+      puts "creating thumbnail #{location}/#{photo.code}.jpg"
 
       prepare_directory
       create_thumbnail(photo, width, height, location)
     end
 
-    return "#{web_location}/#{photo.id}.jpg"
+    return "#{web_location}/#{photo.code}.jpg"
   end
 
 
   def self.create_thumbnail(photo, width, height, location)
+    image_tools = WebMagick.new
 
-
-      image_tools = WebMagick.new
-
-      image = image_tools.create_thumbnail_fit(photo.url(:large), width, height)
-      image.write("#{location}/#{photo.id}.jpg")
+    image = image_tools.create_thumbnail_fit(photo.url, width, height)
+    image.write("#{location}/#{photo.code}.jpg")
   end
 
 
-private
-  
+  private
+
   def self.prepare_directory
 
     unless File.directory? THUMB_ROOT

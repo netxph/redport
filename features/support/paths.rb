@@ -16,6 +16,8 @@ module NavigationHelpers
       new_feedback_path
     when /^the list of feedbacks as (.+)/i
       feedbacks_path(:user => $1)
+    when /^import photographs as (.+)/i
+      import_path(:user => $1)
     
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

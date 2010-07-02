@@ -37,6 +37,7 @@ ActionController::Routing::Routes.draw do |map|
   map.about "/about", :controller => "main", :action => "about"
   map.refresh "/refresh", :controller => "main", :action => "refresh"
   map.login "/login", :controller => "main", :action => "login"
+  map.import "/import", :controller => "photographs", :action => "import"
 
   # See how all your routes lay out with "rake routes"
 

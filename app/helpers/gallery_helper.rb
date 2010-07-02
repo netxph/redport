@@ -1,13 +1,13 @@
 module GalleryHelper
   def render_featured(photo)
-
-    return "<img src=\"#{Gallery.get_featured(photo)}\" />"
-
+    unless photo.nil?
+      "<img src=\"#{Gallery.get_featured(photo)}\" />"
+    end
   end
 
   def render_photo(photo)
-
-    return "<a href=\"#{photo.url(:large)}\" rel=\"lytebox[recent]\" title=\"#{photo.title}\"><img src=\"#{Gallery.get_thumbnail(photo)}\" /></a>"
-
+    unless photo.nil?
+      "<a href=\"#{photo.url}\" rel=\"lytebox[recent]\" title=\"#{photo.name}\"><img src=\"#{Gallery.get_thumbnail(photo)}\" /></a>"
+    end
   end
 end

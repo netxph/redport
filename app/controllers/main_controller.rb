@@ -1,15 +1,18 @@
 class MainController < ApplicationController
   def index
-    featured_index = 1 + rand(Gallery.photos.total)
-    @featured_photo = Gallery.photos[featured_index]
+    @photos = Photograph.all
+
+    featured_index = 1 + rand(@photos.count)
+    @featured_photo = @photos[featured_index]
 
     #just in case it returns null
     if @featured_photo.nil?
-      @featured_photo = Gallery.photos[0]
+      @featured_photo = @photos[0]
     end
   end
 
   def login
+    @title = "Secure code"
   end
 
   def secure

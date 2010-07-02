@@ -1,13 +1,12 @@
 <div id="placeholder">
   <% form_tag "main/secure" do %>
     <p>
-    <h2><%= label_tag "Enter admin code" %></h2><br>
-    <%= label_tag "This will enable administrative features for the site." %><br><br><br><br>
-    <%= password_field_tag "password", :class => "text" %>
+    <%= label_tag "This will enable administrative features for the site." %><br>
+    <%= password_field_tag "password" %>
     </p>
     <br>
     <p>
-    <%= submit_tag "Login", :class => "button" %>
+    <%= submit_tag "Login" %>
     </p>
   <% end %>
 </div>
