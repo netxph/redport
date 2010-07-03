@@ -51,9 +51,13 @@ class Gallery
   end
 
   def self.create_dzi(photo, location)
-    file_options  = { :name => photo.code, :dir => location, :format  => 'jpg', :quality => 60 }
+    
+    dzi = RubyDzi.new(photo.url)
+    dzi.dir = location
+    dzi.quality = 60
+    
+    dzi.generate!(photo.code)
 
-    DeepZoom.new(photo.url, file_options).slice!
   end
 
   def self.create_thumbnail(photo, width, height, location)

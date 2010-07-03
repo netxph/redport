@@ -5,6 +5,9 @@ development:
     admin: [your admin key]
   flickr:
     user_id: [your user id]
+  recaptcha:
+    public_key: [your public key]
+    private_key: [your private key]    
 production:
   global:
     name: [your name]
@@ -12,17 +15,18 @@ production:
     admin: [your admin key]
   flickr:
     user_id: [your user id]
-test:
+  recaptcha:
+    public_key: [your public key]
+    private_key: [your private key]
+test: &test
   global:
     name: [your name]
     title: [your web title]
     admin: [your admin key]
   flickr:
     user_id: [your user id]
+  recaptcha:
+    public_key: [your public key]
+    private_key: [your private key]
 cucumber:
-  global:
-    name: [your name]
-    title: [your web title]
-    admin: [your admin key]
-  flickr:
-    user_id: [your user id]
+  <<: *test

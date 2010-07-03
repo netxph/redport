@@ -24,6 +24,7 @@ Rails::Initializer.run do |config|
   config.gem 'flickr-fu', :lib => 'flickr_fu' #, :version => '0.1.4'
   config.gem 'ambethia-recaptcha', :lib => 'recaptcha/rails', :source => "http://gems.github.com"
   config.gem 'web-magick', :lib => 'web_magick'
+  config.gem 'ruby-dzi', :lib => 'ruby_dzi'
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
@@ -52,5 +53,6 @@ end
 config_reader = File.read(RAILS_ROOT + '/config/config.yml')
 APP_CONFIG = YAML.load(config_reader)[RAILS_ENV]
 
-ENV['RECAPTCHA_PUBLIC_KEY']  = '6LfOBrsSAAAAABu102Z7XaeivuOFaGhgR4UPOVly'
-ENV['RECAPTCHA_PRIVATE_KEY'] = '6LfOBrsSAAAAADafxw0-EjbjFJF6j06eagpbGVG-'
+#special recaptcha environment
+ENV['RECAPTCHA_PUBLIC_KEY']  = APP_CONFIG["recaptcha"]["public_key"]
+ENV['RECAPTCHA_PRIVATE_KEY'] = APP_CONFIG["recaptcha"]["private_key"]
