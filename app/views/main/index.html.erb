@@ -8,8 +8,8 @@
     var viewer = null;
             
     function init() {
-      viewer = new Seadragon.Viewer("viewer");
-      viewer.openDzi("<% Gallery.get_featured(@featured_photo) %>");
+      viewer = new Seadragon.Viewer('viewer');
+      viewer.openDzi('<%= Gallery.get_featured(@featured_photo) %>');
     }
             
     Seadragon.Utils.addEvent(window, "load", init);
