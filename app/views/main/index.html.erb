@@ -3,7 +3,7 @@
 <% end %>
 
 <% content_for :preload_scripts do %>
-  <script type="text/javascript" src="http://seadragon.com/ajax/0.8/seadragon-min.js" />
+  <%= javascript_include_tag "seadragon-min" %>
   <script type="text/javascript">
     var viewer = null;
             

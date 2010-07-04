@@ -241,6 +241,13 @@ text-decoration: underline;
   margin-right: auto;
 }
 
+#feedback {
+  width: 480px;
+  padding-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #message {
   margin-top: 10px;
   margin-bottom: 10px;
