@@ -2,7 +2,16 @@
 
 redport is a customizable online photography portfolio.
 
-v1.1 already released
+v1.2
+* add captcha
+* replace lightbox with fancybox
+* feedback will be moved in-page
+* performance and caching
+* implement seadragon
+* transfer photo management to local db
+* add simple login
+
+v1.1
 * refresh administration tool
 * analytics
 * feedback page
