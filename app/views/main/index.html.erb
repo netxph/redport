@@ -40,7 +40,7 @@
 
 <div id="gallery">
   <% unless @photos.nil? %>
-    <% @photos.each do |photo| %>
+    <% @photos.shuffle.each do |photo| %>
       <div class="thumbnail">
         <%= render_photo(photo) %>
         <div class="label">
