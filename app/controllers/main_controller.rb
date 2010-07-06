@@ -1,7 +1,7 @@
 class MainController < ApplicationController
   def index
     @photos = Photograph.all
-    @featured_photo = Photograph.get_featured
+    @featured_photo = Photograph.get_featured(params[:featured])
   end
 
   def login

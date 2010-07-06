@@ -16,9 +16,20 @@ class Photograph < ActiveRecord::Base
     end
   end
 
-  def self.get_featured
-    if (c = count) != 0
-      find(:first, :offset =>rand(c))
-    end    
+  def self.get_featured(index)
+    unless count == 0
+
+      if index.nil?
+        offset = rand(count)
+      else
+        offset = index.to_i
+        
+        unless (0..count-1) === offset
+          offset = 0
+        end
+      end 
+
+      find(:first, :offset => offset)
+    end
   end
 end
