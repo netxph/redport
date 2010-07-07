@@ -4,6 +4,7 @@
 
 <% content_for :preload_scripts do %>
   <%= javascript_include_tag "seadragon-min" %>
+  <% unless @featured_photo.nil? %>
   <script type="text/javascript">
     var viewer = null;
             
@@ -13,6 +14,7 @@
     }
             
     Seadragon.Utils.addEvent(window, "load", init);
+  <% end %>    
   </script>
 <% end %>
 
