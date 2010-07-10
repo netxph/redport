@@ -2,9 +2,10 @@ class Photograph < ActiveRecord::Base
   validates_uniqueness_of :code  
   validates_presence_of :code, :name, :url
 
+  ALL_CACHE_KEY = "Photograph.all"
 
   def self.all_cached
-    Rails.cache.fetch("Photograph.all") { all }
+    Rails.cache.fetch(ALL_CACHE_KEY) { all }
   end
 
   def self.import_from_web
@@ -16,6 +17,7 @@ class Photograph < ActiveRecord::Base
         end
       end
 
+      Rails.cache.delete(ALL_CACHE_KEY)
       return true
     rescue
       return false
