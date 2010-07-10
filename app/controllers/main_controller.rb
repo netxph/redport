@@ -1,6 +1,6 @@
 class MainController < ApplicationController
   def index
-    @photos = Photograph.all
+    @photos = Photograph.all_cached
     @featured_photo = Photograph.get_featured(params[:featured])
 
     if @photos.nil? or @photos.count == 0

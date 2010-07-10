@@ -46,9 +46,6 @@ width: 270,
   <% unless @featured_photo.nil? %>
     <div class="largepic">
     <div id="viewer"></div>
-    <!--
-      %= render_featured(@featured_photo) %>
-      -->
     </div>
     <div class="caption">
       <h2>...<%=h @featured_photo.name.downcase %></h2>
@@ -62,12 +59,12 @@ width: 270,
 
 <div id="gallery">
   <% unless @photos.nil? %>
-    <% @photos.shuffle.each do |photo| %>
+    <% @photos.each do |photo| %>
       <div class="thumbnail" title="<%= photo.description %>">
         <%= render_photo(photo) %>
         <div class="label">
           <p>
-          <%= "...#{photo.name}" %>
+          <%= photo.name %>
           </p>
         </div>
       </div>
