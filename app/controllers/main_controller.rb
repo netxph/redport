@@ -21,7 +21,10 @@ class MainController < ApplicationController
   def about
 
   end
-  
+
+  def error
+  end
+
   def refresh
     Gallery.refresh
     redirect_to root_url

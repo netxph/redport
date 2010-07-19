@@ -234,6 +234,28 @@ float: none;
 text-decoration: underline;
 }
 
+#error {
+  width: 480px;
+  padding: 0px 15px 15px 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+
+#error h2 {
+  size: 20px;
+  color: white;
+}
+
+#error p {
+  padding: 10px 10px 10px 10px;
+}
+
+#error a {
+float: none;
+text-decoration: underline;
+}
+
 #page_title {
   width: 480px;
   padding-top: 30px;

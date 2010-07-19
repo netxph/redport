@@ -11,7 +11,12 @@ class ApplicationController < ActionController::Base
   helper_method :admin?
   
   protected
-  
+ 
+  def rescue_action_in_public(exception)
+    #generic for now
+    render "main/error"
+  end
+
   def authorize
     unless admin?
       redirect_to root_path
@@ -29,5 +34,9 @@ class ApplicationController < ActionController::Base
     else
       false
     end
+  end
+
+  def local_request?
+    false
   end
 end
