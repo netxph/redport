@@ -252,8 +252,15 @@ text-decoration: underline;
 }
 
 #error a {
-float: none;
-text-decoration: underline;
+  float: none;
+  text-decoration: underline;
+}
+
+#error img {
+  padding: 30px 30px 30px 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #page_title {
