@@ -4,24 +4,25 @@ class Gallery
   FEATURED_ROOT = "#{RAILS_ROOT}/public/images/featured"
   WEB_FEATURED_ROOT = "images/featured"
 
+  def self.refresh(photos)
+    begin
+
+      photos.each do |photo|
+        get_featured(photo)
+        get_thumbnail(photo)
+      end
+
+      return true
+    rescue
+      return false
+    end
+  end
+
   def self.photos
     @host ||= Flickr.new("#{RAILS_ROOT}/config/flickr.yml")
     @photos ||= @host.photos.search(:user_id => APP_CONFIG["flickr"]["user_id"])
   end
   
-
-  def self.refresh
-    @photos = nil
-
-    destroy_directory
-
-    photos.each do |photo|
-      get_featured(photo)
-      get_thumbnail(photo)
-    end
-  end
-
-
   def self.get_featured(photo)
     get_dzi(photo, FEATURED_ROOT, WEB_FEATURED_ROOT)
   end
