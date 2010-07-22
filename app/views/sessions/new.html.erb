@@ -1,5 +1,5 @@
 <div id="placeholder">
-  <% form_tag "main/secure" do %>
+  <% form_tag :action => "create" do %>
     <p>
     <%= label_tag "This will enable administrative features for the site." %><br>
     <%= password_field_tag "password" %>

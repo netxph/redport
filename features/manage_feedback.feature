@@ -27,11 +27,16 @@ Feature: Manage Articles
     Then I should see "Email is invalid"
     
   Scenario: Admin Login
-    When I am on the root as r3dp0rt
+    When I am on the login page
+    And I fill in "password" with "r3dp0rt"
+    And I press "Login"
     Then I should see ".view feedbacks"
     
   Scenario: View Feedbacks
     Given I have posts from test@live.com, post@live.com
-    When I go to the list of feedbacks as r3dp0rt
+    And I am on the login page
+    And I fill in "password" with "r3dp0rt"
+    And I press "Login"
+    When I go to the list of feedbacks
     Then I should see "test@live.com"
     And I should see "post@live.com"

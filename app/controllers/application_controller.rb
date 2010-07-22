@@ -25,15 +25,7 @@ class ApplicationController < ActionController::Base
   end
   
   def admin?
-    unless params[:user].nil?
-      session[:user] = params[:user]
-    end
-
-    unless session[:user].nil?
-      session[:user] == APP_CONFIG["global"]["admin"]
-    else
-      false
-    end
+    session[:password] == APP_CONFIG["global"]["admin"]
   end
 
   def local_request?

@@ -1,4 +1,5 @@
 class MainController < ApplicationController
+
   def index
     @photos = Photograph.all_cached
     @featured_photo = Photograph.get_featured(params[:featured])
@@ -9,17 +10,7 @@ class MainController < ApplicationController
     end
   end
 
-  def login
-    @title = "Secure code"
-  end
-
-  def secure
-    session[:user] = params[:password]
-    redirect_to root_url
-  end
-
   def about
-
   end
 
   def error
