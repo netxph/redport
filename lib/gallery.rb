@@ -6,7 +6,6 @@ class Gallery
 
   def self.refresh(photos)
     begin
-
       photos.each do |photo|
         get_featured(photo)
         get_thumbnail(photo)

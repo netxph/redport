@@ -13,6 +13,7 @@ Feature: Manage Photographs
 
   Scenario: Generate files
     Given I have no cached files
+    And I have photographs
     And I am on the login page
     And I fill in "password" with "r3dp0rt"
     And I press "Login"
