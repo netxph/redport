@@ -1,6 +1,13 @@
 == Welcome to redport
 
-redport is a customizable online photography portfolio.
+New Features
+* full security support
+* friendly error page 
+* performance and caching
+* photo display shuffling 
+* implement fancy box
+* select feature display
+* thumbnail generator tool
 
 v1.2
 * add captcha
