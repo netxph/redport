@@ -27,14 +27,14 @@ class Photograph < ActiveRecord::Base
   def self.get_featured(index)
     photos = all_cached
 
-    unless photos.count == 0
+    unless photos.length == 0
 
       if index.nil?
-        offset = rand(photos.count)
+        offset = rand(photos.length)
       else
         offset = index.to_i
         
-        unless (0..photos.count-1) === offset
+        unless (0..photos.length-1) === offset
           offset = 0
         end
       end 

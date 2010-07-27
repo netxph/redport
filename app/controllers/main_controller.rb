@@ -4,7 +4,7 @@ class MainController < ApplicationController
     @photos = Photograph.all_cached
     @featured_photo = Photograph.get_featured(params[:featured])
 
-    if @photos.nil? or @photos.count == 0
+    if @photos.nil? or @photos.length == 0
       @title = "Gallery empty"
       flash[:notice] = "Gallery is still empty. Running import may resolve the problem."
     end
