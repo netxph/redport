@@ -1,0 +1,18 @@
+<% content_for :styles do %>
+  <%= stylesheet_link_tag "lytebox" %>
+<% end %>
+
+<% content_for :scripts do %>
+  <%= javascript_include_tag "lytebox" %>
+<% end %>
+<div id="page_container">
+  <div class="pagebox">
+    <%= link_to "view feedbacks", feedbacks_path, :rel => "lyteframe", :title => "Add Feedback", :rev => "width: 600px; height:640px; scrolling:yes;" %> 
+  </div>
+  <div class="pagebox">
+    <%= link_to "import photos from external source", import_url %>
+  </div>
+  <div class="pagebox">
+    <%= link_to "refresh file cache", refresh_url %>
+  </div>
+</div>

@@ -263,6 +263,13 @@ text-decoration: underline;
   margin-right: auto;
 }
 
+#page_container {
+  width: 480px;
+  padding-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #page_title {
   width: 480px;
   padding-top: 30px;
@@ -275,6 +282,21 @@ text-decoration: underline;
   padding-top: 30px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.pagebox {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #444;
+  width: 90%;
+  padding: 30px 30px 30px 30px;
+}
+
+.pagebox a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  color: gray;
 }
 
 #message {

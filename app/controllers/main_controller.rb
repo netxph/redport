@@ -1,4 +1,5 @@
 class MainController < ApplicationController
+  before_filter :authorize, :only => [:admin]
 
   def index
     @photos = Photograph.all_cached
@@ -14,6 +15,10 @@ class MainController < ApplicationController
   end
 
   def error
+  end
+
+  def admin
+    @title = "Site Actions"
   end
 
 end

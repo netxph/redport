@@ -36,8 +36,11 @@ ActionController::Routing::Routes.draw do |map|
 
   map.root :controller => "main", :action => "index"
   map.about "/about", :controller => "main", :action => "about"
+  map.admin "/admin", :controller => "main", :action => "admin"
+
   map.login "/login", :controller => "sessions", :action => "new"
   map.logout "/logout", :controller => "sessions", :action => "destroy"
+
   map.import "/import", :controller => "photographs", :action => "import"
   map.refresh "/refresh", :controller => "photographs", :action => "refresh"
 
