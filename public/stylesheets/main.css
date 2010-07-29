@@ -140,7 +140,7 @@ ul#menu {
 #featured div.about {
   float: left;
   width: 418px;
-  height: 287px;
+  height: 286px;
   padding: 3px 3px 3px 3px;
   margin: 10px 10px 10px 0px;
   border: 1px solid #2a2a2a;
@@ -283,20 +283,32 @@ text-decoration: underline;
   margin-left: auto;
   margin-right: auto;
 }
-
+/*
 .pagebox {
-  margin-top: 10px;
   margin-bottom: 10px;
   border: 1px solid #444;
   width: 90%;
-  padding: 30px 30px 30px 30px;
+  height: 50px;
+  vertical-align: middle;
 }
+*/
 
 .pagebox a {
   text-decoration: none;
   font-size: 14px;
   font-weight: bold;
   color: gray;
+  display: block;
+  width: 90%;
+  border: 1px solid #444;
+  margin-bottom: 10px;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.pagebox a:hover {
+  background-color: #222;
 }
 
 #message {

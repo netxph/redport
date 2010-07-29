@@ -15,7 +15,6 @@ class PhotographsController < ApplicationController
     @title = "Generate thumbnails and seadragon slices."
 
     if Gallery.refresh(Photograph.all_cached)
-      breakpoint
       flash[:notice] = "Files successfully generated."
     else
       flash[:error] = "Error generating files. Please try again."
