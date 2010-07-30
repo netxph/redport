@@ -2,6 +2,7 @@
 <html>
   <head>
     <title><%= "#{APP_CONFIG['global']['name']} | #{APP_CONFIG['global']['title']}" %></title>
+    <link rel="shortcut icon" href="/favicon.ico" />
     <%= yield :preload_scripts %>
     <%= render :partial => "shared/analytics" %>
     <%= yield :styles %>
