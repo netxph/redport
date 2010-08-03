@@ -1,54 +1,44 @@
-<% content_for :styles do %>
-  <%= stylesheet_link_tag "lytebox" %>
-<% end %>
-
 <% content_for :preload_scripts do %>
-  <%= javascript_include_tag "jquery-1.3.min" %>
-  <%= javascript_include_tag "jquery.hoverIntent.minified" %>
-  <%= javascript_include_tag "jquery.bgiframe.min" %>
-  <%= javascript_include_tag "jquery.bt.min" %>
-  <%= javascript_include_tag "seadragon-min" %>
+  <script type="text/javascript" src="http://seadragon.com/ajax/0.8/seadragon-min.js"></script>
+  <script type="text/javascript" src="http://cdn.jquerytools.org/1.2.3/full/jquery.tools.min.js"></script>
+
   <% unless @featured_photo.nil? %>
-  <script type="text/javascript">
-    var viewer = null;
-            
-    function init() {
-      viewer = new Seadragon.Viewer('viewer');
-      viewer.openDzi('<%= Gallery.get_featured(@featured_photo) %>');
-    }
-            
-    Seadragon.Utils.addEvent(window, "load", init);
+    <script type="text/javascript">
+      var viewer = null;
 
-    $(document).ready(
-      function() {
-      $(".thumbnail").bt( {
-padding: 20,
-width: 270,
-  spikeLength: 10,
-  spikeGirth: 10,
-  fill: 'rgba(0, 0, 0, .8)',
-  strokeWidth: 2,
-  strokeStyle: '#fff',
-  positions: ['top', 'bottom'],
-  cssStyles: {color: '#FFF'}
-        });
-      });
+      function init() {
+        viewer = new Seadragon.Viewer('viewer');
+        viewer.openDzi('<%= Gallery.get_featured(@featured_photo) %>');
+      }
 
+      Seadragon.Utils.addEvent(window, "load", init);
+    </script>
   <% end %>    
-  </script>
 <% end %>
 
 <% content_for :scripts do %>
-  <%= javascript_include_tag "lytebox" %>
+  <script> 
+    $(".thumbnail").tooltip({
+      offset: [10, 0],
+      effect: 'slide',
+      slideOffset: 10,
+      opacity: 0.9
+    }).dynamic({ 
+      bottom: { 
+        direction: 'down', 
+        bounce: true 
+      } 
+    });
+  </script>
 <% end %>
 
 <div id="featured">
   <% unless @featured_photo.nil? %>
     <div class="largepic">
-    <div id="viewer"></div>
+      <div id="viewer"></div>
     </div>
     <div class="caption">
-      <h2>...<%=h @featured_photo.name.downcase %></h2>
+      <h2><%=h @featured_photo.name.downcase %></h2>
       <p><%=h @featured_photo.description.gsub("\n","<br>") %></p>
     </div>
     <div class="about">
@@ -60,13 +50,20 @@ width: 270,
 <div id="gallery">
   <% unless @photos.nil? %>
     <% @photos.each do |photo| %>
-      <div class="thumbnail" title="<%= photo.description %>">
+      <div class="thumbnail" >
         <%= render_photo(photo) %>
         <div class="label">
           <p>
           <%= photo.name %>
           </p>
         </div>
+      </div>
+
+      <div class="tooltip" >
+        <h2><%= photo.name %></h2>
+        <p>
+          <%= photo.description %>
+        </p>
       </div>
     <% end %>  
   <% end %>

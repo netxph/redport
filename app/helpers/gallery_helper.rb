@@ -7,7 +7,7 @@ module GalleryHelper
 
   def render_photo(photo)
     unless photo.nil?
-      "<a href=\"#{photo.url}\" rel=\"lytebox[recent]\" title=\"#{photo.name}\"><img src=\"#{Gallery.get_thumbnail(photo)}\" /></a>"
+      "<a href=\"#{photo.url}\"><img src=\"#{Gallery.get_thumbnail(photo)}\" alt=\"#{photo.name}\"/></a>"
     end
   end
 end

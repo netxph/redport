@@ -337,3 +337,25 @@ text-decoration: underline;
   color: white;
   padding: 10px 10px 10px 10px;
 }
+
+.tooltip {
+  display:none;
+	background:transparent url(../images/tooltip.png);
+	font-size:12px;
+	height:55px;
+	width:260px;
+	padding:25px;
+	color:gray;	
+}
+
+.tooltip h2 {
+  padding-bottom: 5px;
+  font-size: 14px;
+}
+
+.tooltip.bottom {
+	background:url(../images/tooltip-bottom.png);
+	padding-top:40px;
+  width: 260px;
+  height: 35px;
+}
