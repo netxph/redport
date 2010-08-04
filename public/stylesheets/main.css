@@ -364,6 +364,11 @@ text-decoration: underline;
 .overlay {
   display: none;
   z-indez: 10000;
+  max-width: 90%;
+}
+
+.overlay img {
+  width: 100%;
 }
 
 .overlay .close {

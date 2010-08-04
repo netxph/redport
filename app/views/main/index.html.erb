@@ -18,7 +18,9 @@
 
 <% content_for :scripts do %>
   <script> 
-    $("img[rel]").overlay();
+    $("img[rel]").overlay({
+      static: true
+    });
     $(".thumbnail").tooltip({
       offset: [10, 0],
       effect: 'slide',
