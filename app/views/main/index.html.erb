@@ -18,6 +18,7 @@
 
 <% content_for :scripts do %>
   <script> 
+    $("img[rel]").overlay();
     $(".thumbnail").tooltip({
       offset: [10, 0],
       effect: 'slide',
@@ -51,7 +52,7 @@
   <% unless @photos.nil? %>
     <% @photos.each do |photo| %>
       <div class="thumbnail" >
-        <%= render_photo(photo) %>
+        <%= image_tag Gallery.get_thumbnail(photo), :alt => photo.name, :rel => "#photo#{photo.id}" %>
         <div class="label">
           <p>
           <%= photo.name %>
@@ -64,6 +65,10 @@
         <p>
           <%= photo.description %>
         </p>
+      </div>
+
+      <div class="overlay" id="photo<%= photo.id %>">
+        <%= image_tag photo.url %>
       </div>
     <% end %>  
   <% end %>

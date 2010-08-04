@@ -1,6 +1,6 @@
 class Gallery
   THUMB_ROOT = "#{RAILS_ROOT}/public/images/preview"
-  WEB_THUMB_ROOT = "images/preview"
+  WEB_THUMB_ROOT = "preview"
   FEATURED_ROOT = "#{RAILS_ROOT}/public/images/featured"
   WEB_FEATURED_ROOT = "images/featured"
 

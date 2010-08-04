@@ -179,6 +179,7 @@ ul#menu {
 #gallery div.thumbnail img {
   width: 310px;
   height: 232px;
+  cursor: pointer;
 }
 
 #errorExplanation {
@@ -358,4 +359,19 @@ text-decoration: underline;
 	padding-top:40px;
   width: 260px;
   height: 35px;
+}
+
+.overlay {
+  display: none;
+  z-indez: 10000;
+}
+
+.overlay .close {
+  background-image: url(../images/close.png);
+  position: absolute;
+  right: -15px;
+  top: -15px;
+  cursor: pointer;
+  height: 35px;
+  width: 35px;
 }
