@@ -284,6 +284,10 @@ text-decoration: underline;
   margin-left: auto;
   margin-right: auto;
 }
+
+#feedback_content {
+  height: 200px;
+}
 /*
 .pagebox {
   margin-bottom: 10px;
@@ -379,4 +383,31 @@ text-decoration: underline;
   cursor: pointer;
   height: 35px;
   width: 35px;
+}
+
+#overlay {
+	background-image:url(../images/transparent.png);
+	color:#efefef;
+	height:500px;
+}
+	
+div.contentWrap {
+  height: 100%;
+	overflow-y:auto;
+}
+
+.apple_overlay {
+	display:none;
+	background-image:url(../images/white.png);
+	width:640px;		
+	padding:35px;
+	font-size:11px;
+}
+
+.apple_overlay .close {
+	background-image:url(../images/close.png);
+	position:absolute; right:5px; top:5px;
+	cursor:pointer;
+	height:35px;
+	width:35px;
 }

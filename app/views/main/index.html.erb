@@ -32,6 +32,20 @@
         bounce: true 
       } 
     });
+    $(function() {
+	    $("a[rel]").overlay({
+		    mask: 'black',
+		    effect: 'apple',
+ 
+    		onBeforeLoad: function() {
+          var wrap = this.getOverlay().find(".contentWrap");
+
+          if (wrap.is(":empty")) {
+    		    wrap.load(this.getTrigger().attr("href"));
+          }
+    		}
+	    });
+    });
   </script>
 <% end %>
 
