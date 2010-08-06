@@ -79,7 +79,7 @@ ul#menu {
 
 #footer {
   float: left;
-  font-size: 14px;
+  font-size: 12px;
   text-align: center;
   width: 1024px;
   padding: 15px 15px 15px 15px;
@@ -87,7 +87,8 @@ ul#menu {
 
 #footer a {
   float: none;
-  text-decoration: underline;
+  text-decoration: none;
+  color: #fff;
 }
 
 #gallery div.thumbnail {
@@ -383,31 +384,4 @@ text-decoration: underline;
   cursor: pointer;
   height: 35px;
   width: 35px;
-}
-
-#overlay {
-	background-image:url(../images/transparent.png);
-	color:#efefef;
-	height:500px;
-}
-	
-div.contentWrap {
-  height: 100%;
-	overflow-y:auto;
-}
-
-.apple_overlay {
-	display:none;
-	background-image:url(../images/white.png);
-	width:640px;		
-	padding:35px;
-	font-size:11px;
-}
-
-.apple_overlay .close {
-	background-image:url(../images/close.png);
-	position:absolute; right:5px; top:5px;
-	cursor:pointer;
-	height:35px;
-	width:35px;
 }

@@ -1,10 +1,6 @@
 Given /^I have pictures from gallery$/ do
-  Gallery.photos.each do |photo|
-    unless Photograph.exists?(:code => photo.id)
-      puts "importing #{photo.title}"
-      Photograph.create!(:code => photo.id, :name => photo.title, :description => photo.description, :url => photo.url(:large))
-    end
-  end  
+  Photograph.delete_all
+  Photograph.import_from_web
 end
 
 Then /^I should see some pictures$/ do
