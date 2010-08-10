@@ -21,7 +21,7 @@ Rails::Initializer.run do |config|
   # config.gem "aws-s3", :lib => "aws/s3"
 
   config.gem 'mime-types', :lib => 'mime/types' #, :version => '1.16'
-  config.gem 'flickr-fu', :lib => 'flickr_fu' #, :version => '0.1.4'
+  config.gem 'flickr_fu', :lib => 'flickr_fu' #, :version => '0.1.4'
   config.gem 'ambethia-recaptcha', :lib => 'recaptcha/rails', :source => "http://gems.github.com"
   config.gem 'web-magick', :lib => 'web_magick'
   config.gem 'ruby-dzi', :lib => 'ruby_dzi'

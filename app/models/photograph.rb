@@ -9,7 +9,7 @@ class Photograph < ActiveRecord::Base
   end
 
   def self.import_from_web
-    begin
+#   begin
       Gallery.photos.each do |photo|
         unless exists?(:code => photo.id)
           puts "importing #{photo.title}"
@@ -19,9 +19,9 @@ class Photograph < ActiveRecord::Base
 
       Rails.cache.delete(ALL_CACHE_KEY)
       return true
-    rescue
-      return false
-    end
+#   rescue
+#     return false
+#   end
   end
 
   def self.get_featured(index)

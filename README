@@ -43,6 +43,10 @@ shared views
   - _about.html.template => _about.html.erb
   - _analytics.html.template => _analytics.html.erb
   
+* current flickr_fu build uploaded is broken, please get the latest code and build it.
+  - rake build
+  - rake install
+
 * run
   - rake db:migrate
   - rake gems:install
