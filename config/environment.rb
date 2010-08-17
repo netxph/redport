@@ -25,6 +25,7 @@ Rails::Initializer.run do |config|
   config.gem 'ambethia-recaptcha', :lib => 'recaptcha/rails', :source => "http://gems.github.com"
   config.gem 'web-magick', :lib => 'web_magick'
   config.gem 'ruby-dzi', :lib => 'ruby_dzi'
+  config.gem 'will_paginate'
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named

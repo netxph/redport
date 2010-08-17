@@ -386,18 +386,15 @@ text-decoration: underline;
   width: 35px;
 }
 
-#navigator {
+.pagination {
+  font-size: 14px;
   width: 100%;
-  font-size: 16px;
+  float: left;
+  margin-left: 10px;
 }
 
-#navigator a {
+.pagination a {
   text-decoration: none;
   color: white;
   font-weight: bold;
-}
-
-#navigator p {
-  text-align: center;
-  padding-right: 25px;
 }

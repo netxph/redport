@@ -63,11 +63,9 @@
     </div>
   <% end %>
 </div>
-<div id="navigator">
-  <p>
-  Want more? <a href="#">Back</a>&nbsp;| <a href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> |&nbsp;<a href="#">Next</a>
-  </p>
-</div>
+  <%=
+    will_paginate(@photos)
+  %>
 <div id="gallery">
   <% unless @photos.nil? %>
     <% @photos.each do |photo| %>
