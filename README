@@ -1,35 +1,13 @@
 == Welcome to redport
 
+Current Version: v1.4
+
 New Features
-* full security support
-* friendly error page 
-* performance and caching
-* photo display shuffling 
-* implement fancy box
-* select feature display
-* thumbnail generator tool
-
-v1.2
-* add captcha
-* replace lightbox with fancybox
-* feedback will be moved in-page
-* performance and caching
-* implement seadragon
-* transfer photo management to local db
-* add simple login
-
-v1.1
-* refresh administration tool
-* analytics
-* feedback page
-* simple admin for viewing feedbacks
-* featured photo
-* showing of titles
-
-v1.0
-* customizable css
-* integrated with flickr
-* uses lightbox for viewing
+* picture display paging
+* site administration page
+* change lytebox into jquery tools overlay
+* create tooltip for portfolios
+* website icon
 
 HOW TO USE
 * copy and modify
