@@ -30,7 +30,7 @@ Feature: Manage Articles
     When I am on the login page
     And I fill in "password" with "r3dp0rt"
     And I press "Login"
-    Then I should see ".view feedbacks"
+    Then I should see "site actions"
     
   Scenario: View Feedbacks
     Given I have posts from test@live.com, post@live.com

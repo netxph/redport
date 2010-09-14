@@ -10,4 +10,4 @@ Feature: Static Pages
     
   Scenario: About 
     When I go to the about page
-    Then I should see ".about redport"
+    Then I should see "about redport"
