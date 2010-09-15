@@ -163,6 +163,20 @@ ul#menu {
   text-decoration: underline;
 }
 
+div.pagination {
+  display: inline;
+  float: left;
+  font-size: 14px;
+  margin-left: 10px;
+  width: 100%;
+}
+
+div.pagination a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  float: none;
+}
 /*
 #featured div.largepic img {
   width: 550px;
@@ -386,15 +400,4 @@ text-decoration: underline;
   width: 35px;
 }
 
-.pagination {
-  font-size: 14px;
-  width: 100%;
-  float: left;
-  margin-left: 10px;
-}
 
-.pagination a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-}

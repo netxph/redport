@@ -63,9 +63,9 @@
     </div>
   <% end %>
 </div>
-  <%=
-    will_paginate(@photos)
-  %>
+
+<%= will_paginate(@photos) %>
+
 <div id="gallery">
   <% unless @photos.nil? %>
     <% @photos.each do |photo| %>
