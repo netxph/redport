@@ -19,7 +19,13 @@
 <% content_for :scripts do %>
   <script> 
     $("img[rel]").overlay({
-      static: true
+      static: true,
+      fixed: false,
+      mask: {
+		    color: 'black',
+    		loadSpeed: 200,
+    		opacity: 0.9
+	    }
     });
     $(".thumbnail").tooltip({
       offset: [10, 0],
@@ -31,20 +37,6 @@
         direction: 'down', 
         bounce: true 
       } 
-    });
-    $(function() {
-	    $("a[rel]").overlay({
-		    mask: 'black',
-		    effect: 'apple',
- 
-    		onBeforeLoad: function() {
-          var wrap = this.getOverlay().find(".contentWrap");
-
-          if (wrap.is(":empty")) {
-    		    wrap.load(this.getTrigger().attr("href"));
-          }
-    		}
-	    });
     });
   </script>
 <% end %>
