@@ -8,14 +8,18 @@
     <%= yield :styles %>
     <%= render :partial => "shared/styles" %>
   </head>
-  <body>
-    <div id="container">
-      <%= render :partial => "shared/header" %>
-      <%= yield %>
-      <%= render :partial => "shared/footer" %>
+  <% if yield(:body) %>
+    <%= yield :body %>
+  <% else %>
+    <body>
+      <div id="container">
+        <%= render :partial => "shared/header" %>
+        <%= yield %>
+        <%= render :partial => "shared/footer" %>
 
-      <%= yield :scripts %>
-      <%= render :partial => "shared/scripts" %>
-    </div>
-  </body>
+        <%= yield :scripts %>
+        <%= render :partial => "shared/scripts" %>
+      </div>
+    </body>
+  <% end %>
 </html>

@@ -1,0 +1,12 @@
+<% content_for :preload_scripts do %>
+  <%= javascript_include_tag 'prototype' %>
+<% end %>
+
+<% content_for :body do %>
+<body onload="<%= remote_function(:url => { :action => :remote_import } ) %>">
+  <div id="display_ajax">
+    <p>Please wait while your information loads.</p>
+    <p><img src="/images/ajax-loader.gif" /></p>
+  </div>
+</body>
+<% end %>
