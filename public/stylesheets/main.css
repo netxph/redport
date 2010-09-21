@@ -358,6 +358,12 @@ text-decoration: underline;
   padding: 10px 10px 10px 10px;
 }
 
+#message img {
+  display: block;
+  padding: 20px;
+  margin: auto;
+}
+
 .tooltip {
   display:none;
 	background:transparent url(../images/tooltip.png);

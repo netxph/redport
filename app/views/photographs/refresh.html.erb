@@ -1,0 +1,17 @@
+<% content_for :preload_scripts do %>
+  <%= javascript_include_tag 'prototype' %>
+<% end %>
+
+<% content_for :body do %>
+  <body onload="<%= remote_function(:url => { :action => :remote_refresh } ) %>">
+    <div id="container">
+      <%= render :partial => "shared/header" %>
+      <div id="page_container">
+        <div id="message">
+          <img src="/images/ajax-loader.gif" />
+        </div>
+      </div>
+      <%= render :partial => "shared/footer" %>
+    </div>
+  </body>
+<% end %>
