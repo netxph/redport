@@ -30,6 +30,7 @@
     $(".thumbnail").tooltip({
       offset: [10, 0],
       effect: 'slide',
+      predelay: 1000,
       slideOffset: 10,
       opacity: 0.9
     }).dynamic({ 
@@ -50,8 +51,8 @@
       <h2><%=h @featured_photo.name.downcase %></h2>
       <p><%=h @featured_photo.description.gsub("\n","<br>") %></p>
     </div>
-    <div class="about">
-      <%= render :partial => "shared/about" %>
+    <div class="news">
+      <%= render :partial => "news" %>
     </div>
   <% end %>
 </div>

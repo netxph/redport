@@ -128,6 +128,10 @@ ul#menu {
   border: 1px solid #2a2a2a;
 }
 
+#featured div.caption:hover {
+  background-color: #222;
+}
+
 #featured div.caption h2 {
   padding: 10px 10px 10px 10px;
   text-align: right;
@@ -138,7 +142,7 @@ ul#menu {
   padding: 10px 10px 10px 10px;
 }
 
-#featured div.about {
+#featured div.news {
   float: left;
   width: 418px;
   height: 286px;
@@ -147,20 +151,35 @@ ul#menu {
   border: 1px solid #2a2a2a;
 }
 
-#featured div.about h2 {
-  padding: 10px 10px 10px 10px;
+#featured div.news:hover {
+  background-color: #222;
+}
+
+#featured div.news h2 {
+  padding-top: 10px;
+  padding-right: 10px;
   text-align: right;
 }
 
-#featured div.about p {
+#featured div.news p.subtext {
+  padding-top: 0px;
+  text-align: right;
+  font-size: 10px;
+}
+
+#featured div.news p {
   line-height: 130%;
   font-size: 14px;
   padding: 10px 10px 10px 10px;
 }
 
-#featured div.about a {
-  float: none;
-  text-decoration: underline;
+#featured div.news p.linkhead {
+  text-align: right;
+}
+
+#featured div.news p.linkhead a {
+  text-decoration: none;
+  color: white;
 }
 
 div.pagination {
@@ -183,6 +202,10 @@ div.pagination a {
   height: 412px;
 }
 */
+
+#gallery div.thumbnail:hover {
+  background-color: #222;
+}
 
 #gallery div.thumbnail div.label {
 }
