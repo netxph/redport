@@ -1,30 +1,18 @@
-<h1>Listing blogs</h1>
+<div id="blogs">
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Create date</th>
-    <th>Modified date</th>
-    <th>Body</th>
-    <th>Author</th>
-    <th>Email</th>
-  </tr>
+  <p class="menu_item">
+    <%= link_to 'create new', new_blog_path %>    
+  </p>
+  <% @blogs.each do |blog| %>
+    <div class="item">
+      <h3><%=h blog.title %></h3>
+      <p class="sub_title"><%=h blog.modified_date %></p>
+      <p class="body"><%=h blog.body %></p>
+    </div>
+    <p class="links">
+      <%= link_to "edit", edit_blog_path(blog) %>
+      <%= link_to "remove", blog, :confirm => "are you sure?", :method => :delete %>
+    </p>
+  <% end %>
 
-<% @blogs.each do |blog| %>
-  <tr>
-    <td><%=h blog.title %></td>
-    <td><%=h blog.create_date %></td>
-    <td><%=h blog.modified_date %></td>
-    <td><%=h blog.body %></td>
-    <td><%=h blog.author %></td>
-    <td><%=h blog.email %></td>
-    <td><%= link_to 'Show', blog %></td>
-    <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-    <td><%= link_to 'Destroy', blog, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New blog', new_blog_path %>
+</div>

@@ -2,6 +2,7 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.xml
   def index
+    @title = "stolen shot news"
     @blogs = Blog.all
 
     respond_to do |format|

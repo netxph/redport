@@ -327,6 +327,14 @@ text-decoration: underline;
 #feedback_content {
   height: 200px;
 }
+
+#blogs {
+  width: 480px;
+  padding-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /*
 .pagebox {
   margin-bottom: 10px;
