@@ -236,11 +236,16 @@ padding: 15px 15px 15px 15px;
 }
 
 #placeholder {
-  width: 480px;
-  padding: 0px 15px 15px 15px;
+  width: 800px;
+  padding: 15px 15px 15px 15px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 30px;
+  margin-top: 10px;
+}
+
+#placeholder label {
+  display: block;
+  padding-bottom: 15px;
 }
 
 #placeholder input.text, textarea {
@@ -257,7 +262,9 @@ padding: 15px 15px 15px 15px;
 }
 
 #about {
-
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #about h2 {
@@ -275,7 +282,7 @@ text-decoration: underline;
 }
 
 #error {
-  width: 480px;
+  width: 800px;
   padding: 0px 15px 15px 15px;
   margin-left: auto;
   margin-right: auto;
@@ -304,21 +311,21 @@ text-decoration: underline;
 }
 
 #page_container {
-  width: 480px;
-  padding-top: 30px;
+  width: 800px;
+  padding-top: 10px;
   margin-left: auto;
   margin-right: auto;
 }
 
 #page_title {
-  width: 480px;
+  width: 800px;
   padding-top: 30px;
   margin-left: auto;
   margin-right: auto;
 }
 
 #feedback {
-  width: 480px;
+  width: 800px;
   padding-top: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -329,7 +336,7 @@ text-decoration: underline;
 }
 
 #blogs {
-  width: 480px;
+  width: 800px;
   padding-top: 10px;
   margin-left: auto;
   margin-right: auto;
@@ -367,7 +374,7 @@ text-decoration: underline;
   margin-top: 10px;
   margin-bottom: 10px;
   border: 1px solid #444;
-  width: 90%;
+  width: 800px;
 }
 
 #message p.notice {
