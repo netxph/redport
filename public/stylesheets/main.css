@@ -337,9 +337,42 @@ text-decoration: underline;
 
 #blogs {
   width: 800px;
-  padding-top: 10px;
   margin-left: auto;
   margin-right: auto;
+  font-size: 14px;
+}
+
+#blogs div.item {
+  border: 1px solid #444;
+  margin-top: 10px;
+}
+
+#blogs p.link {
+  text-align: right;
+}
+
+#blogs p.link a {
+  text-decoration: none;
+  color: white;
+}
+
+#blogs div.item:hover {
+  background-color: #222;
+}
+
+#blogs div.item h2 {
+  text-align: right;
+  padding: 10px 10px 0px 10px;
+}
+
+#blogs div.item p.subtext {
+  text-align: right;
+  font-size: 10px;
+  padding-right: 10px;
+}
+
+#blogs div.item p.body {
+  padding: 10px 10px 10px 10px;
 }
 
 /*

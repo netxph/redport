@@ -1,18 +1,17 @@
 <div id="blogs">
-
-  <p class="menu_item">
-    <%= link_to 'create new', new_blog_path %>    
+  <p class="link">
+  <%= link_to 'create new [+]', new_blog_path %>
   </p>
   <% @blogs.each do |blog| %>
     <div class="item">
-      <h3><%=h blog.title %></h3>
-      <p class="sub_title"><%=h blog.modified_date %></p>
+      <h2><%=h blog.title %></h2>
+      <p class="subtext"><%=h blog.modified_date %></p>
       <p class="body"><%=h blog.body %></p>
+      <p class="link">
+      <%= link_to "edit [#]", edit_blog_path(blog) %>
+      <%= link_to "remove [x]", blog, :confirm => "are you sure?", :method => :delete %>
+      </p>
     </div>
-    <p class="links">
-      <%= link_to "edit", edit_blog_path(blog) %>
-      <%= link_to "remove", blog, :confirm => "are you sure?", :method => :delete %>
-    </p>
   <% end %>
 
 </div>
