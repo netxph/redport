@@ -3,6 +3,8 @@ development:
     name: [your name]
     title: [your web title]
     admin: [your admin key]
+    author: [your name]
+    email: [your email]
   flickr:
     user_id: [your user id]
   recaptcha:
@@ -13,6 +15,8 @@ production:
     name: [your name]
     title: [your web title]
     admin: [your admin key]
+    author: [your name]
+    email: [your email]
   flickr:
     user_id: [your user id]
   recaptcha:
@@ -23,6 +27,8 @@ test: &test
     name: [your name]
     title: [your web title]
     admin: [your admin key]
+    author: [your name]
+    email: [your email]
   flickr:
     user_id: [your user id]
   recaptcha:

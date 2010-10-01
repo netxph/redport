@@ -1,16 +1,24 @@
 <div id="blogs">
-  <p class="link">
-  <%= link_to 'create new [+]', new_blog_path %>
-  </p>
+
+  <% if admin? %>
+    <p class="link">
+      <%= link_to 'create new [+]', new_blog_path %>
+    </p>
+  <% end %>
+
   <% @blogs.each do |blog| %>
     <div class="item">
       <h2><%=h blog.title %></h2>
       <p class="subtext"><%=h blog.modified_date %></p>
       <p class="body"><%=h blog.body %></p>
-      <p class="link">
-      <%= link_to "edit [#]", edit_blog_path(blog) %>
-      <%= link_to "remove [x]", blog, :confirm => "are you sure?", :method => :delete %>
-      </p>
+
+      <% if admin? %>
+        <p class="link">
+          <%= link_to "edit [#]", edit_blog_path(blog) %>
+          <%= link_to "remove [x]", blog, :confirm => "are you sure?", :method => :delete %>
+        </p>
+      <% end %>
+
     </div>
   <% end %>
 

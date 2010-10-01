@@ -1,7 +1,7 @@
-<h2>this is a news title</h2>
-<p class="subtext">22 Sep 2010</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec arcu leo, eget auctor nisl. Aliquam aliquet risus lorem, sed vehicula est. Pellentesque eget eleifend quam. Donec in orci velit. Donec dapibus justo ac turpis accumsan porta. Donec sagittis commodo nisl, a mattis odio venenatis quis. Nunc a diam elit, a feugiat neque. Nulla sagittis ante a turpis posuere pharetra. Donec nunc dolor, suscipit eu adipiscing in, posuere sit amet purus. Sed non massa id justo feugiat scelerisque volutpat sed massa. Donec suscipit purus velit. Aenean ullamcorper vulputate massa ac dignissim... </p>
+<h2><%=h @recent_news.title %></h2>
+<p class="subtext"><%=h @recent_news.modified_date %></p>
+<p><%=h "#{@recent_news.body[0, 525]} ..." %></p>
 
 <p class="linkhead">
-<a href="#">read more</a>
+  <%= link_to "read more [+]", blogs_path %>
 </p>

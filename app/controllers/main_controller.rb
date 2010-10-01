@@ -3,7 +3,9 @@ class MainController < ApplicationController
 
   def index
     get_photos
-    get_featured 
+    get_featured
+
+    @recent_news = Blog.recent 
   end
 
   def about

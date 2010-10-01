@@ -1,9 +1,8 @@
 class BlogsController < ApplicationController
-  # GET /blogs
-  # GET /blogs.xml
+
   def index
     @title = "stolen shot news"
-    @blogs = Blog.all
+    @blogs = Blog.find(:all, :order => "modified_date desc")
 
     respond_to do |format|
       format.html # index.html.erb
@@ -11,21 +10,10 @@ class BlogsController < ApplicationController
     end
   end
 
-  # GET /blogs/1
-  # GET /blogs/1.xml
-  def show
-    @blog = Blog.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @blog }
-    end
-  end
-
-  # GET /blogs/new
-  # GET /blogs/new.xml
   def new
     @blog = Blog.new
+    @blog.author = APP_CONFIG["global"]["author"]
+    @blog.email = APP_CONFIG["global"]["email"]
 
     respond_to do |format|
       format.html # new.html.erb
@@ -33,19 +21,18 @@ class BlogsController < ApplicationController
     end
   end
 
-  # GET /blogs/1/edit
   def edit
     @blog = Blog.find(params[:id])
   end
 
-  # POST /blogs
-  # POST /blogs.xml
   def create
     @blog = Blog.new(params[:blog])
+    @blog.create_date = Time.now
+    @blog.modified_date = Time.now
 
     respond_to do |format|
       if @blog.save
-        format.html { redirect_to(@blog, :notice => 'Blog was successfully created.') }
+        format.html { redirect_to(blogs_path, :notice => 'Blog was successfully created.') }
         format.xml  { render :xml => @blog, :status => :created, :location => @blog }
       else
         format.html { render :action => "new" }
@@ -54,14 +41,13 @@ class BlogsController < ApplicationController
     end
   end
 
-  # PUT /blogs/1
-  # PUT /blogs/1.xml
   def update
     @blog = Blog.find(params[:id])
+    @blog.modified_date = Time.now
 
     respond_to do |format|
       if @blog.update_attributes(params[:blog])
-        format.html { redirect_to(@blog, :notice => 'Blog was successfully updated.') }
+        format.html { redirect_to(blogs_path, :notice => 'Blog was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -70,8 +56,6 @@ class BlogsController < ApplicationController
     end
   end
 
-  # DELETE /blogs/1
-  # DELETE /blogs/1.xml
   def destroy
     @blog = Blog.find(params[:id])
     @blog.destroy
