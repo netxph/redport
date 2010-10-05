@@ -1,0 +1,27 @@
+h1. Welcome to redport
+
+h2. Current Version: v1.5
+
+*New Features*
+* news management
+* main page ui enhancements
+* package task (rake deploy:minimal)
+
+*HOW TO USE*
+* copy and modify:
+
+*configurations*
+  * database.template => database.yml
+  * config.template => config.yml
+  * flickr.template => flickr.yml
+
+*shared view(s)*
+  * _analytics.html.template => _analytics.html.erb
+  
+*NOTE: current flickr_fu build uploaded is broken, please get the latest code and build it.*
+  # rake build
+  # rake install
+
+*run*
+* rake db:migrate
+* rake gems:install
