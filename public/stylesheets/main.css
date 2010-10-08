@@ -161,6 +161,11 @@ ul#menu {
   text-align: right;
 }
 
+#featured div.news h2 a {
+  text-decoration: none;
+  color: white;
+}
+
 #featured div.news p.subtext {
   padding-top: 0px;
   text-align: right;

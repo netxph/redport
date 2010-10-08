@@ -26,6 +26,7 @@ Rails::Initializer.run do |config|
   config.gem 'web-magick', :lib => 'web_magick'
   config.gem 'ruby-dzi', :lib => 'ruby_dzi'
   config.gem 'will_paginate'
+  config.gem 'RedCloth', :lib => 'redcloth'
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named

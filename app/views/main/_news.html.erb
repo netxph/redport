@@ -1,18 +1,17 @@
 <% if @recent_news %>
-<h2><%=h @recent_news.title %></h2>
-<p class="subtext"><%=h @recent_news.modified_date %></p>
-<p><%=h "#{@recent_news.body[0, 525]}" %>
-<% if @recent_news.body.length > 525 %>
-  ...
-<% end %>
-</p>
 
-<p class="linkhead">
-  <%= link_to "read more [+]", blogs_path %>
-  </p>
+  <h2><%=h link_to @recent_news.title, blogs_path %></h2>
+
+  <p class="subtext"><%=h @recent_news.modified_date %></p>
+
+  <%= "#{RedCloth.new(@recent_news.body).to_html}" %>
+
 <% else %>
-<h2>no news yet.</h2>
-<p class="linkhead">
-  <%= link_to "manage your first news here [+]", blogs_path %>
-</p>
+
+  <h2>no news yet.</h2>
+  
+  <p class="linkhead">
+    <%= link_to "manage your first news here [+]", blogs_path %>
+  </p>
+
 <% end %>
