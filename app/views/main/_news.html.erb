@@ -3,8 +3,12 @@
   <h2><%=h link_to @recent_news.title, blogs_path %></h2>
 
   <p class="subtext"><%=h @recent_news.modified_date.strftime('%A, %d %B %Y') %></p>
-  <%= "#{RedCloth.new(@recent_news.body).to_html}" %>
-
+  <div class="content">
+    <%= "#{RedCloth.new(@recent_news.body).to_html}" %>
+  </div>
+  <p class="linkhead">
+    <%= link_to "read more [+]", blogs_path %>
+  </p>
 <% else %>
 
   <h2>no news yet.</h2>
