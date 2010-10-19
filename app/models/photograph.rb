@@ -25,7 +25,7 @@ class Photograph < ActiveRecord::Base
   end
 
   def self.all_paged(page)
-    Photograph.paginate :page => page, :per_page => 9 
+    Photograph.paginate :page => page, :per_page => APP_CONFIG['global']['pages']
   end
 
   def self.get_featured(index)

@@ -5,6 +5,7 @@ development:
     admin: [your admin key]
     author: [your name]
     email: [your email]
+    pages: [page number]
   flickr:
     user_id: [your user id]
   recaptcha:
@@ -17,6 +18,7 @@ production:
     admin: [your admin key]
     author: [your name]
     email: [your email]
+    pages: [page number]
   flickr:
     user_id: [your user id]
   recaptcha:
@@ -29,6 +31,7 @@ test: &test
     admin: [your admin key]
     author: [your name]
     email: [your email]
+    pages: [page number]
   flickr:
     user_id: [your user id]
   recaptcha:

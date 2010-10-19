@@ -24,7 +24,7 @@ protected
 
     @current_page = params[:page].nil? ? 1 : params[:page]
 
-    @photos = Photograph.all_cached.paginate :page => @current_page, :per_page => 9
+    @photos = Photograph.all_cached.paginate :page => @current_page, :per_page => APP_CONFIG['global']['pages']
 
     if @photos.nil? or @photos.length == 0
       @title = "Gallery empty"
