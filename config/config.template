@@ -6,6 +6,7 @@ development:
     author: [your name]
     email: [your email]
     pages: [page number]
+    version: [site version]
   flickr:
     user_id: [your user id]
   recaptcha:
@@ -19,6 +20,7 @@ production:
     author: [your name]
     email: [your email]
     pages: [page number]
+    version: [site version]
   flickr:
     user_id: [your user id]
   recaptcha:
@@ -32,6 +34,7 @@ test: &test
     author: [your name]
     email: [your email]
     pages: [page number]
+    version: [site version]
   flickr:
     user_id: [your user id]
   recaptcha:

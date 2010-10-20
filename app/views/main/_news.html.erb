@@ -1,6 +1,6 @@
 <% if @recent_news %>
 
-  <h2><%=h link_to @recent_news.title, blogs_path %></h2>
+  <h2><%= @recent_news.title %></h2>
 
   <p class="subtext"><%=h @recent_news.modified_date.strftime('%A, %d %B %Y') %></p>
   <div class="content">

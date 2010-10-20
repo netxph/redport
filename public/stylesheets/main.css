@@ -360,6 +360,7 @@ text-decoration: underline;
 
 #blogs div.item p {
   padding: 10px 10px 10px 10px;
+  line-height: 130%;
 }
 
 #blogs p.link {
