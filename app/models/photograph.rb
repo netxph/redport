@@ -5,7 +5,7 @@ class Photograph < ActiveRecord::Base
   ALL_CACHE_KEY = "Photograph.all"
 
   def self.all_cached
-    Rails.cache.fetch(ALL_CACHE_KEY) { all }
+    Rails.cache.fetch(ALL_CACHE_KEY) { find(:all, :order => "updated_at desc") }
   end
 
   def self.import_from_web

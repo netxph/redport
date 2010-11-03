@@ -6,7 +6,13 @@ class SessionsController < ApplicationController
 
   def create
     session[:password] = params[:password]
-    flash[:notice] = "Sucessfully logged in"
+
+    if admin?    
+      flash[:notice] = "Sucessfully logged in"
+    else
+      flash[:error] = "Login failed"
+    end
+
     redirect_to "/login"
   end
 
