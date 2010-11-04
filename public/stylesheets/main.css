@@ -208,6 +208,11 @@ div.pagination a {
   font-weight: bold;
   float: none;
 }
+
+#blogs div.pagination {
+  margin-top: 10px;
+}
+
 /*
 #featured div.largepic img {
   width: 550px;

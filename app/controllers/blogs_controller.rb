@@ -2,7 +2,9 @@ class BlogsController < ApplicationController
 
   def index
     @title = "stolen shot news"
-    @blogs = Blog.find(:all, :order => "modified_date desc")
+
+    @current_page = params[:page].nil? ? 1 : params[:page]
+    @blogs = Blog.find(:all, :order => "modified_date desc").paginate(:page => @current_page, :per_page => 3)
 
     respond_to do |format|
       format.html # index.html.erb
