@@ -1,11 +1,18 @@
 h1. Welcome to redport
 
-h2. Current Version: v1.5
+h2. Current Version: v1.6
+
+Visit "www.stolenshot.com":http://www.stolenshot.com to preview this release.
 
 *New Features*
-* news management
-* main page ui enhancements
-* package task (rake deploy:minimal)
+* News blog view enhancements
+* Textile formatting
+
+*Major Features*
+* Photo mirroring using flickr as host
+* News blog management
+* Seadragon preview
+* Great UI eye candy
 
 *HOW TO USE*
 * copy and modify:
