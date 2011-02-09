@@ -1,6 +1,6 @@
 h1. Welcome to redport
 
 h2. About
-redport is a photo portfolio web application that provides photography showcases and management of pictures online.
+p. redport is a photo portfolio web application that provides photography showcases and management of pictures online.
 
 NOTE: Trunk is slowly transitioning to Rails 3.0. Switch to Release-1.0 branch for the latest release.
