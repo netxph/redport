@@ -1,9 +1,0 @@
-<ul id="menu">
-  <% if admin? %>
-    <li><%= link_to ".logout", logout_path  %></li>
-    <li><%= link_to ".site actions", admin_path  %></li>
-  <% end %> 
-  <li><%= link_to ".about", about_path %></li>
-  <li><%= link_to ".feedback", new_feedback_url %></li>
-  <li><%= link_to ".home", root_path %></li>
-</ul>

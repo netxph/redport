@@ -1,25 +1,14 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html>
-  <head>
-    <title><%= "#{APP_CONFIG['global']['name']} | #{APP_CONFIG['global']['title']}" %></title>
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <%= yield :preload_scripts %>
-    <%= render :partial => "shared/analytics" %>
-    <%= yield :styles %>
-    <%= render :partial => "shared/styles" %>
-  </head>
-  <% if yield(:body) %>
-    <%= yield :body %>
-  <% else %>
-    <body>
-      <div id="container">
-        <%= render :partial => "shared/header" %>
-        <%= yield %>
-        <%= render :partial => "shared/footer" %>
+<head>
+  <title>Redport2</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
 
-        <%= yield :scripts %>
-        <%= render :partial => "shared/scripts" %>
-      </div>
-    </body>
-  <% end %>
+<%= yield %>
+
+</body>
 </html>
