@@ -1,10 +1,21 @@
 *.swp
 *.tar.gz
-*.lock
+Gemfile.lock
 
 log/*.log
 tmp/**/*
 deploy/**
+
+config/database.yml
+config/config.yml
+config/flickr.yml
+
+app/views/shared/_analytics.html.erb
+app/views/shared/_about.html.erb
+
+public/images/preview/*
+public/images/featured/*
+public/images/*.tar.gz
 
 tags
 
@@ -14,3 +25,4 @@ db/schema.rb
 # Other userful tidbits
 doc/api
 doc/app
+

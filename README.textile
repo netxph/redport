@@ -35,7 +35,7 @@ Visit "www.stolenshot.com":http://www.stolenshot.com to preview this release.
 
 h3. Information on Release 2.0
 
-Release 1.6 is now stored and branched, and I am already starting major code changes by refactoring the code and moving it to Rails 3.0.
+Release 2.0 is now on located on Release-2.0 branch.
 
 Release 2.0 will focus on:
 
