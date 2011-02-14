@@ -1,4 +1,4 @@
-Redport2::Application.routes.draw do
+Redport::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

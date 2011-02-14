@@ -4,4 +4,4 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-Redport2::Application.load_tasks
+Redport::Application.load_tasks
