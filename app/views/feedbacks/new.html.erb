@@ -1,0 +1,20 @@
+<div id="feedback">
+  <%= error_messages_for "feedback" %>
+  <% form_for :feedback, @feedback, :url => { :action => "create" } do |f| %>
+    <p>
+    <%= f.label :email %><br>
+    <%= f.text_field :email, :class => "text" %>
+    </p>
+    <br>
+    <p>
+    <%= f.label :content %><br>
+    <%= f.text_area :content %>
+    </p>
+    <br>
+    <%= recaptcha_tags %>  
+    <br>
+    <p>
+    <%= f.submit "Create", :class => "button" %>
+    </p>
+  <% end %>
+</div>

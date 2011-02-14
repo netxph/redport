@@ -1,0 +1,86 @@
+<% content_for :preload_scripts do %>
+  <script type="text/javascript" src="http://seadragon.com/ajax/0.8/seadragon-min.js"></script>
+  <script type="text/javascript" src="http://cdn.jquerytools.org/1.2.3/full/jquery.tools.min.js"></script>
+
+  <% unless @featured_photo.nil? %>
+    <script type="text/javascript">
+      var viewer = null;
+
+      function init() {
+        viewer = new Seadragon.Viewer('viewer');
+        viewer.openDzi('<%= Gallery.get_featured(@featured_photo) %>');
+      }
+
+      Seadragon.Utils.addEvent(window, "load", init);
+    </script>
+  <% end %>    
+<% end %>
+
+<% content_for :scripts do %>
+  <script> 
+    $("img[rel]").overlay({
+      static: true,
+      fixed: false,
+      mask: {
+		    color: 'black',
+    		loadSpeed: 200,
+    		opacity: 0.9
+	    }
+    });
+    $(".thumbnail").tooltip({
+      offset: [10, 0],
+      effect: 'slide',
+      predelay: 1000,
+      slideOffset: 10,
+      opacity: 0.9
+    }).dynamic({ 
+      bottom: { 
+        direction: 'down', 
+        bounce: true 
+      } 
+    });
+  </script>
+<% end %>
+
+<div id="featured">
+  <% unless @featured_photo.nil? %>
+    <div class="largepic">
+      <div id="viewer"></div>
+    </div>
+    <div class="caption">
+      <h2><%=h @featured_photo.name.downcase %></h2>
+      <p><%=h @featured_photo.description.gsub("\n","<br>") %></p>
+    </div>
+    <div class="news">
+      <%= render :partial => "news" %>
+    </div>
+  <% end %>
+</div>
+
+<%= will_paginate(@photos) %>
+
+<div id="gallery">
+  <% unless @photos.nil? %>
+    <% @photos.each do |photo| %>
+      <div class="thumbnail" >
+        <%= image_tag Gallery.get_thumbnail(photo), :alt => photo.name, :rel => "#photo#{photo.id}" %>
+        <div class="label">
+          <p>
+          <%= photo.name %>
+          </p>
+        </div>
+      </div>
+
+      <div class="tooltip" >
+        <h2><%= photo.name %></h2>
+        <p>
+          <%= photo.description %>
+        </p>
+      </div>
+
+      <div class="overlay" id="photo<%= photo.id %>">
+        <%= image_tag photo.url %>
+      </div>
+    <% end %>  
+  <% end %>
+</div>

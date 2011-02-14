@@ -1,0 +1,12 @@
+<% unless @title.nil? %>
+  <div id="page_title">
+    <h2><%=@title%></h2>
+    <% flash.each do |key, msg| %>
+      <div id="message">
+        <%= content_tag :p, msg, :class => key %>
+      </div>
+    <% end %>
+    <% flash.discard unless flash.nil? %>
+  </div>
+<% end %>
+

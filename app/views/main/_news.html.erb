@@ -1,0 +1,19 @@
+<% if @recent_news %>
+
+  <h2><%= @recent_news.title %></h2>
+
+  <p class="subtext"><%=h @recent_news.modified_date.strftime('%A, %d %B %Y') %></p>
+  <div class="content">
+    <%= "#{RedCloth.new(@recent_news.body).to_html}" %>
+  </div>
+  <p class="linkhead">
+    <%= link_to "read more [+]", blogs_path %>
+  </p>
+<% else %>
+
+  <h2>no news yet.</h2>
+  <p class="linkhead">
+    <%= link_to "manage your first news here [+]", blogs_path %>
+  </p>
+
+<% end %>

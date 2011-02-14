@@ -1,0 +1,46 @@
+h1. Welcome to redport
+
+h2. Current Version: v1.6
+
+Visit "www.stolenshot.com":http://www.stolenshot.com to preview this release.
+
+*New Features*
+* News blog view enhancements
+* Textile formatting
+
+*Major Features*
+* Photo mirroring using flickr as host
+* News blog management
+* Seadragon preview
+* Great UI eye candy
+
+*HOW TO USE*
+* copy and modify:
+
+*configurations*
+  * database.template => database.yml
+  * config.template => config.yml
+  * flickr.template => flickr.yml
+
+*shared view(s)*
+  * _analytics.html.template => _analytics.html.erb
+  
+*NOTE: current flickr_fu build uploaded is broken, please get the latest code and build it.*
+  # rake build
+  # rake install
+
+*run*
+* rake db:migrate
+* rake gems:install
+
+h3. Information on Release 2.0
+
+Release 1.6 is now stored and branched, and I am already starting major code changes by refactoring the code and moving it to Rails 3.0.
+
+Release 2.0 will focus on:
+
+* Application will have proper test harness
+* Code will be refactored
+* Use of AJAX
+* Flexible data storage
+* Rails integration and code generation

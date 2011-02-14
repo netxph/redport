@@ -1,0 +1,9 @@
+<div id="feedback">
+  <% @feedbacks.each do |feedback| %>
+    <div class="item">
+      <h3>From: <%=h feedback.email %><h3><br>
+      <h3>Content:</h3>
+      <%=h feedback.content %>
+    </div>
+  <%end%>
+</div>
