@@ -6,4 +6,5 @@ task :deploy do
   cp_r 'config', 'deploy/redport', :verbose => true
   cp_r 'db', 'deploy/redport', :verbose => true
   cp_r 'public', 'deploy/redport', :verbose => true
+  cp_r 'vendor', 'deploy/redport', :verbose => true
 end
