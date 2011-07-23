@@ -2,10 +2,10 @@ class PagesController < ApplicationController
   def index
   end
 
-  def about
+  def preview
   end
 
-  def preview
+  def about
   end
 
 end

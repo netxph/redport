@@ -6,13 +6,13 @@ class PagesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get about" do
-    get :about
+  test "should get preview" do
+    get :preview
     assert_response :success
   end
 
-  test "should get preview" do
-    get :preview
+  test "should get about" do
+    get :about
     assert_response :success
   end
 
