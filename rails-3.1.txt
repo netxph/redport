@@ -1,0 +1,18 @@
+Rails 3.1 notes
+
+Javascript minification engines are disabled.
+
+In Gemfile, these are commented
+
+coffee-script
+uglifier
+execjs
+
+In production.rb, config.assets.js_compressor is commented as well
+
+In application.rb, config.assets.enabled = false
+
+then create these files
+
+public/javascripts/application.js
+public/stylesheets/application.css
