@@ -6,3 +6,5 @@ tmp/
 deploy/
 vendor/cache
 public/assets
+Capfile
+config/deploy.rb
