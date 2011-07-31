@@ -5,3 +5,4 @@ log/*.log
 tmp/
 deploy/
 vendor/cache
+public/assets
