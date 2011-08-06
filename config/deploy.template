@@ -1,0 +1,62 @@
+set :application, "[application]"
+set :repository,  "http://github.com/netxph/redport.git"
+set :host, "[host]"
+set :deploy_to, "[deploy_path]"
+set :user, "[user]"
+set :password, "[password]"
+set :sync_path, "[sync_path]"
+
+set :scm, :git
+set :use_sudo, false
+set :keep_releases, 1
+
+role :web, host
+role :app, host
+role :db, host, :primary => true
+
+namespace :project do
+  task :package do
+    init
+    prepare
+  end
+
+  task :init do
+    system 'rm -rf shared'
+    system 'mkdir -p shared/system'
+    system 'mkdir -p shared/bundle'
+    system 'mkdir -p shared/cache'
+    system 'mkdir -p shared/log'
+    system 'mkdir -p shared/config' 
+    system 'mkdir -p shared/assets'
+    system 'ln -sf ../shared/assets public'
+  end
+
+  task :prepare do
+    system 'bundle package && bundle install'
+    system 'rake assets:precompile'
+    system 'cp config/database.yml shared/config'
+  end
+end
+
+namespace :deploy do
+  task :restart, :roles => :app, :except => { :no_release => true } do
+    run "touch #{File.join(current_path,'tmp','restart.txt')}"
+  end
+
+  task :symlink_shared do
+    run "rm -rf #{release_path}/vendor/bundle"
+    run "rm -rf #{release_path}/vendor/cache"
+    run "ln -sf #{shared_path}/bundle #{release_path}/vendor/bundle"
+    run "ln -sf #{shared_path}/cache #{release_path}/vendor/cache" 
+    run "ln -sf #{shared_path}/assets #{release_path}/public/assets"
+    run "ln -nsf #{shared_path}/config/database.yml #{release_path}/config/database.yml"
+  end
+
+  task :sync do
+    system "rsync -vr --exclude='.DS_Store' shared #{sync_path}"
+  end
+  
+end
+
+after "deploy:update_code", "deploy:sync"
+after "deploy:sync", "deploy:symlink_shared"

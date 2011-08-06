@@ -8,6 +8,7 @@ vendor/cache
 public/assets
 Capfile
 config/deploy.rb
+config/database.yml
 vendor/cache
 vendor/bundle
 shared
