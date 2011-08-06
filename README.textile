@@ -1,0 +1,19 @@
+h1. redport 2.0
+
+visit "www.stolenshot.com":http://www.stolenshot.com to preview this release
+
+h2. What will come on first alpha release
+
+I am still on conceptual stage as of this moment. Redport 1.0 has gone so many releases, and it became stable for sometime. I'd like to feel that urge of bringing the site up again using the best practices I've learned.
+
+Without further ado, here's what I'm planning to do on my first release.
+
+* Look for a solid test framework, strict implementation this time
+* Thinking of a good white layout design for my site
+* HTML 5 animations
+* coffescript, ajax, jquery. Getting pretty excited.
+
+I'm still thinking where to put my project management site. Gravity or Lighthouse.
+
+That's it for now. Follow me on twitter for live updates. #netxph.
+
