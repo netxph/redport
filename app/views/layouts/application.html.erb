@@ -2,13 +2,14 @@
 <html>
 <head>
   <title>redport 2.0 - coming soon</title>
-  <%= stylesheet_link_tag    "application" %>
+  <%= stylesheet_link_tag "application" %>
+
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-<%= yield %>
-
+<body class="pages">
+  <%= render "shared/header" %> 
+  <%= yield %>
+  <%= render "shared/footer" %>
 </body>
 </html>
