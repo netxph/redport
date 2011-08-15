@@ -12,7 +12,7 @@ config/database.yml
 
 tmp/
 deploy/
-shared/
+shared/*
 
 public/assets
 
