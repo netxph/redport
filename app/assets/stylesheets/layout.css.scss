@@ -1,5 +1,10 @@
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/OpenSans-Light.ttf');
+}
+
 body {
-  font-family: Segoe UI,Tahoma,Arial,Verdana,sans-serif;
+  font-family: 'Open Sans',Arial, Helvetica, sans-serif;
   background-color: white;
   font-size: 14px;
   padding: 20px;

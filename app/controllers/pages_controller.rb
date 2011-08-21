@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   end
 
   def preview
-    @title = "preview"
+    @title = "most used"
   end
 
   def about
