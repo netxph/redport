@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Redport::Application.config.secret_token = '2d454b5a354f3c9e95695eb1533b34ef2e942e89668071fb6797e65586e1547c98b832a857f4bf1e9d81c6fc8be6bb720afb33c8a3382339f8f93c8da352163f'
+Redport::Application.config.secret_token = 'acd345c528b58b63b959733c642d7bb7aac8cb832862768530d62bb84d5d533f7923e2266e9d5fe4524a64f98070c0209ade1ff92867b8bba81b3b898fdd0215'
