@@ -1,10 +1,12 @@
-h1. redport 2.0
+h1. redport
 
-visit "www.stolenshot.com":http://www.stolenshot.com to preview this release
+First release has reached 1.6, and 2.0 is on its way.
 
-h2. What will come on first alpha release
+visit "redport-beta.heroku.com":http://redport-beta.heroku.com to preview the version 1.6.
 
-I am still on conceptual stage as of this moment. Redport 1.0 has gone so many releases, and it became stable for sometime. I'd like to feel that urge of bringing the site up again using the best practices I've learned.
+h2. What will come on first alpha release of the next version (2.0)
+
+I am still on conceptual stage as of this moment. If you want to get the previous version, switch to release-1.0 branch.
 
 Without further ado, here's what I'm planning to do on my first release.
 

@@ -34,18 +34,19 @@ body {
 #header h1 {
   font-family: 'Open Sans', Tahoma, Arial, Verdana, sans-serif;
   font-size: 48px;
+  color: #a80000;
 }
 
 #header h3 {
-  padding-top: 12px;
+  padding-top: 6px;
   font-style: italic;
-  color: #06f;
+  color: gray;
 }
 
 h2 {
-  font-family: 'Open Sans', Tahoma, Arial, Verdana, sans-serif;
-  color: gray;
-  font-size: 36px;
+  font-family: 'Vegur', Tahoma, Arial, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
   padding-top: 24px;
   padding-bottom: 24px;
 }
