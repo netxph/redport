@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/assets/OpenSans-Light.eot');
+  src: local('Open Sans Light'), local('OpenSans-Light'), url('/assets/OpenSans-Light.woff') format('woff'), url('/assets/OpenSans-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Vegur';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/assets/vegur-l-webfont.eot');
+  src: local('Vegur Light'), local('Vegur-Light'), url('/assets/vegur-l-webfont.woff') format('woff');
+}
+
+* {
+  font-family: 'Segoe UI', Tahoma, Arial, Verdana, sans-serif;
+  font-size: 16px;
+}
+
+body {
+  background-color: #ddd;
+}
+
+#container {
+  width: 952px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  padding: 36px;
+}
+
+#header h1 {
+  font-family: 'Open Sans', Tahoma, Arial, Verdana, sans-serif;
+  font-size: 48px;
+}
+
+#header h3 {
+  padding-top: 12px;
+  font-style: italic;
+  color: #06f;
+}
+
+h2 {
+  font-family: 'Open Sans', Tahoma, Arial, Verdana, sans-serif;
+  color: gray;
+  font-size: 36px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+#content {
+  padding-top: 24px;
+}
