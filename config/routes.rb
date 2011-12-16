@@ -1,4 +1,14 @@
 Redport::Application.routes.draw do
+  
+  resources :pages do
+    member do
+      get 'index'
+      get 'prototype'
+    end
+  end
+
+  root :to => 'pages#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
