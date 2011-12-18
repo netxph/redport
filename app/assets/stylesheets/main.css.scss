@@ -1,0 +1,34 @@
+body {
+  font-family: Segoe UI Light,Segoe UI,Tahoma,Arial,Verdana,sans-serif;
+}
+
+h1 {
+  font-size: 26px;
+  line-height: 29px;
+}
+
+#page {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+#header h1 {
+  text-align: center;
+  margin: 10px 0;
+}
+
+#header h1 p {
+  display: inline;
+}
+
+#header h1 p.title {
+  font-weight: bold;
+}
+
+#footer {
+  font-size: 12px;
+}
+
+#footer p {
+  text-align: center;
+}

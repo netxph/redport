@@ -7,7 +7,7 @@ Redport::Application.routes.draw do
     end
   end
 
-  root :to => 'pages#index'
+  root :to => 'pages#prototype'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

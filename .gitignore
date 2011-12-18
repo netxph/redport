@@ -18,3 +18,4 @@
 
 # Project related ignores
 config/database.yml
+db/schema.rb
