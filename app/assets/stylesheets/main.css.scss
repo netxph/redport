@@ -32,3 +32,29 @@ h1 {
 #footer p {
   text-align: center;
 }
+
+#content div.caption {
+  position: relative;
+  z-index: 2;
+  bottom: 50px;
+  height: 50px;
+}
+
+.caption-back {
+background: black;
+width: 100%;
+height: 100%;
+top: 0px;
+opacity: 0.3;
+}
+
+.caption-text {
+position: absolute;
+top: 0px;
+padding: 12px;
+color: white;
+}
+
+.photo img {
+  vertical-align: top;
+}
