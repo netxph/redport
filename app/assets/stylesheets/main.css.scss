@@ -1,9 +1,5 @@
 body {
-  font-family: Segoe UI Light,Segoe UI,Tahoma,Arial,Verdana,sans-serif;
-  background: #FFFFFF;
-  background: -moz-linear-gradient(top, #FFFFFF, #DDDDDD);
-  background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#DDDDDD));
-  filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#FFFFFF', EndColorStr='#DDDDDD', GradientType=0);
+  font-family: 'Lato',Segoe UI Light,Segoe UI,Tahoma,Arial,Verdana,sans-serif;
 }
 
 h1 {
@@ -13,13 +9,14 @@ h1 {
 
 h3 {
   font-size: 18px;
+  font-weight: bold;
 }
 
 hr {
 }
 
 p {
-  font-size: 12px;
+  font-size: 16px;
 }
 
 #menu {
@@ -44,13 +41,13 @@ p {
 }
 
 #header h1 {
-  text-align: center;
-  margin: 10px 0;
+  padding: 6px;
+  margin: 24px 0;
 }
 
 #header h1 p {
   display: inline;
-  font-size: 26px;
+  font-size: 48px;
 }
 
 #header h1 p.title {
@@ -59,6 +56,23 @@ p {
 
 #content {
   display: block;
+}
+
+#content ul.category {
+  padding: 6px;
+  margin-top: 24px;
+}
+
+#content ul.category li {
+  display: inline;
+  list-style-type: none;
+  padding-right: 20px;
+  color: gray;
+  font-size: 24px;
+}
+
+#content ul.category li.selected {
+  color: black;
 }
 
 #footer {
@@ -102,11 +116,6 @@ p {
   height: 195px;
   margin: 6px;
   border: 1px solid black;
-  -moz-box-shadow: 3px 3px 4px #000;
-	-webkit-box-shadow: 3px 3px 4px #000;
-	box-shadow: 3px 3px 4px #000;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
-	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
 }
 
 #gallery div.photo img {
@@ -121,11 +130,6 @@ p {
   height: 404px;
   margin: 6px;
   border: 1px solid black;
-  -moz-box-shadow: 3px 3px 4px #000;
-	-webkit-box-shadow: 3px 3px 4px #000;
-	box-shadow: 3px 3px 4px #000;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
-	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
 }
 
 #gallery div.photo-big img {
