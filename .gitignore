@@ -19,3 +19,8 @@
 # Project related ignores
 config/database.yml
 db/schema.rb
+
+# Capistrano files - users will have their own
+config/deploy.rb
+Capfile
+
