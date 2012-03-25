@@ -24,3 +24,5 @@ db/schema.rb
 config/deploy.rb
 Capfile
 
+# Test related ignores
+Guardfile
