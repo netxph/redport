@@ -13,16 +13,3 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-
-*.swp
-
-# Project related ignores
-config/database.yml
-db/schema.rb
-
-# Capistrano files - users will have their own
-config/deploy.rb
-Capfile
-
-# Test related ignores
-Guardfile
