@@ -20,6 +20,15 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+group :tests do
+  if RUBY_PLATFORM =~ /(win32|w32)/
+    gem 'win32console', '1.3.0'
+  end
+
+  gem 'minitest'
+  gem 'minitest-reporters', '>= 0.5.0'
+end
+
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
