@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  name: MyString
-  description: MyString
-  category: MyString
-  url: MyString
+  name: flower
+  description: macro shot of flower
+  category: Still Shots
+  url: http://localhost/flower.jpg
 
 two:
-  name: MyString
-  description: MyString
-  category: MyString
-  url: MyString
+  name: falls
+  description: cold and beautiful falls
+  category: Landscape
+  url: http://localhost/falls.jpg
