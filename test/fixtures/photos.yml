@@ -1,12 +1,12 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
+flower:
   name: flower
   description: macro shot of flower
   category: Still Shots
   url: http://localhost/flower.jpg
 
-two:
+falls:
   name: falls
   description: cold and beautiful falls
   category: Landscape
