@@ -47,21 +47,17 @@ class PhotoTest < ActiveSupport::TestCase
   end
 
   context 'is valid' do
-    setup do
-      @photo = Photo.new
-    end
 
     should 'valid if complete' do
-      @photo.name = 'test'
-      @photo.description = 'test description'
-      @photo.category = 'test'
-      @photo.url = 'http://localhost/test.jpg'
+      photo = FactoryGirl.build(:photo)
 
-      assert @photo.valid?
+      assert photo.valid?
     end
 
     should 'not valid if empty' do
-      assert !@photo.valid?
+      photo = Photo.new
+
+      assert !photo.valid?
     end
   end
 

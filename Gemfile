@@ -29,6 +29,7 @@ group :test do
   gem 'minitest-reporters', '>= 0.5.0'
   gem 'shoulda'
   gem 'shoulda-context'
+  gem 'factory_girl_rails'
 end
 
 gem 'jquery-rails'
