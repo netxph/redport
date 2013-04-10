@@ -1,7 +1,9 @@
 class Photo < ActiveRecord::Base
   attr_accessible :category, :description, :name, :url
 
-  validates_presence_of :name, :category, :url
+  validates :name, :presence => true
+  validates :category, :presence => true
+  validates :url, :presence => true
 
   def self.get_photos
     Photo.all
