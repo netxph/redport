@@ -1,8 +1,8 @@
 FactoryGirl.define do
   factory :photo do
-    name 'flower'
+    sequence(:name) { |n|  "flower#{n}" }
     description 'beautiful spring flower'
-    category 'macro'
+    sequence(:category) { |n|  "macro#{n}" }
     url 'http://localhost/flower.jpg'
   end
 end

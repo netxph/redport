@@ -9,7 +9,11 @@ describe Photo do
   it { Photo.should respond_to :get_categories }
 
   context 'when get photos' do
-    subject { Photo.get_photos }
+    subject do
+      FactoryGirl.create_list(:photo, 2)
+
+      Photo.get_photos
+    end
 
     it { should_not be_nil }
     its(:count) { should == 2 }
@@ -17,7 +21,11 @@ describe Photo do
   end
 
   context 'when get categories' do
-    subject { Photo.get_categories }
+    subject do
+      FactoryGirl.create_list(:photo, 2)
+
+      Photo.get_categories
+    end
 
     it { should_not be_nil }
     its(:count) { should == 2 }
