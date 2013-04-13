@@ -20,6 +20,12 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+group :development, :test do
+  gem 'factory_girl_rails'
+  gem 'rspec-rails'
+  gem 'guard-rspec'
+end
+
 group :test do
   if RUBY_PLATFORM =~ /(win32|w32)/
     gem 'win32console', '1.3.0'
@@ -27,11 +33,12 @@ group :test do
 
   gem 'minitest'
   gem 'minitest-reporters', '>= 0.5.0'
+  gem 'faker'
+  gem 'database_cleaner'
+  gem 'launchy'
   gem 'shoulda'
   gem 'shoulda-context'
   gem 'shoulda-matchers'
-  gem 'factory_girl_rails'
-  gem 'rspec-rails'
   gem 'capybara'
 end
 
