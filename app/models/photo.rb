@@ -5,11 +5,6 @@ class Photo < ActiveRecord::Base
   validates :category, :presence => true
   validates :url, :presence => true
 
-  def self.get_photos
-    Photo.all
-  end
+  scope :get_categories, select(:category).uniq
 
-  def self.get_categories
-    Photo.select(:category).uniq
-  end
 end
