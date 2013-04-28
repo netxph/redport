@@ -1,0 +1,6 @@
+<% @categories.each do |category| %>
+    <%= category.name %>
+    <% category.photos.each do |photo| %>
+        <%= photo.name %>
+    <% end %>
+<% end %>
