@@ -1,5 +1,10 @@
 Redport::Application.routes.draw do
+  get 'home/about'
+  get 'home/repair'
+
   resources :categories
+
+  root to: 'home#repair'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
